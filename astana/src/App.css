@@ -43,7 +43,6 @@
 
 .underline {
 	color: #5dd39e;
-
 	text-decoration: none;
 	background: linear-gradient(to left, #5dd39e, #5dd39e 100%);
 	background-position: 0 100%;
@@ -53,6 +52,7 @@
 }
 
 .underlineHover:hover {
+	cursor: pointer;
 	color: #5dd39e;
 	filter: drop-shadow(0 0 2em #646cffaa);
 	text-decoration: none;
@@ -66,4 +66,13 @@
 	color: white;
 	font-weight: 700;
 	padding-left: 5px;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
 }

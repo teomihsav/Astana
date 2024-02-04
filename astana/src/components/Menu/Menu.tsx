@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/Logo'
 import phone from '../../assets/svg/phone.svg'
+// import SmoothScroll from '../SmoothScroll/SmoothScroll'
 
 const Menu = () => {
   const menu = ['НАЧАЛО', 'ПРОЕКТ', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
@@ -14,7 +15,9 @@ const Menu = () => {
   }
 
   return <>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+
+    <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+
       <Logo />
       {
         menu.map(el =>
@@ -27,7 +30,9 @@ const Menu = () => {
         <img src={phone} style={{ marginLeft: '30px' }} alt="phone contact" color={'white'} />
         <div className='phoneText'>+359 9087546436</div>
       </span>
-    </div >
+
+    </div>
+
   </>
 }
 
