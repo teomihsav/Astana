@@ -1,4 +1,5 @@
 import React, { } from 'react'
+import { scrollToSmoothly } from '../../helpers/helpers'
 
 type propTypeMenu = {
   el: string
@@ -6,28 +7,6 @@ type propTypeMenu = {
   colorMenu: string
 }
 const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
-
-  // const refLink = useRef<HTMLDivElement | null>(null)
-  function scrollToSmoothly(pos: number, time: number | null) {
-    const currentPos = window.pageYOffset;
-    let start: number | null = null;
-    if (time == null) time = 500;
-    pos = +pos, time = +time;
-    window.requestAnimationFrame(function step(currentTime) {
-      start = !start ? currentTime : start;
-      const progress = currentTime - start;
-      if (currentPos < pos) {
-        window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
-      } else {
-        window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
-      }
-      if (progress < time) {
-        window.requestAnimationFrame(step);
-      } else {
-        window.scrollTo(0, pos);
-      }
-    });
-  }
 
   return <>
 
@@ -42,10 +21,9 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
           onClick={(event: React.SyntheticEvent) => {
             event.preventDefault()
             const element = document.getElementById(el)
-            console.log('element: ', element)
             // element?.scrollIntoView({ behavior: 'smooth' })
             // scrollToSmoothly(0, 500)
-            scrollToSmoothly(element.offsetTop, 300)
+            scrollToSmoothly(element?.offsetTop as number, 300)
           }}
         >
           {el}
