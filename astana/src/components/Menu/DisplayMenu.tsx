@@ -17,7 +17,7 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
 
       <span className={colorMenu === el ? 'underline' : 'underlineHover'}  >
 
-        <span style={{ color: 'white', }} className={colorMenu === el ? 'underline' : 'underlineHover'}
+        <span style={{ color: 'gray', }} className={colorMenu === el ? 'underline' : 'underlineHover'}
           onClick={(event: React.SyntheticEvent) => {
             event.preventDefault()
             const element = document.getElementById(el)

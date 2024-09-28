@@ -2,14 +2,25 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+// import Checkin from './components/Checkin/Checkin'
 import Menu from './components/Menu/Menu'
 import Page from './components/Page/Page'
 // import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
+// import Frame from 'react-frame-component';
 function App() {
+  // Load react component in iframe
 
   return <>
     <Menu />
+    {/* <Frame
+      style={{ marginTop: "200px" }}
+      title="my-iframe"
+      width="800px"
+      height="500px"
+    // srcDoc={ReactDOMServer.renderToString(<Checkin />)}
+    >
+      <Checkin />
+    </Frame> */}
 
     {/* <BrowserRouter>
       <Suspense fallback={'Loading...'}>
