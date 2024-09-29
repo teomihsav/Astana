@@ -46,7 +46,7 @@ const Menu = () => {
       <div className='email-text'>
 
         <span style={{
-          position: 'absolute', bottom: '32px', fontSize: '12px', fontWeight: 700, color: 'lightgray',
+          position: 'absolute', bottom: '30px', fontSize: '12px', fontWeight: 700, color: 'lightgray',
           left: 0,
           right: 0,
           marginInline: 'auto',
