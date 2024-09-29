@@ -1,164 +1,18 @@
 import Checkin from '../../assets/checkin.png'
+import Dnd from '../../assets/dnd1.png'
+import Card from '../Card/Card'
 const Page = () => {
+  const titles = ['Car rental check in app for full fill missing data and add credit card and additional drivers.', 'Task Drag Organizer', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
+  const ids = ['Checkin Car Rental', 'Task Drag', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
+
   return <>
-
-    <div style={{ paddingTop: 100 }} id="НАЧАЛО"  > </div>
-
-    <h3>
-      Car rental check in app for full fill missing data and add credit card and additional drivers.
-    </h3>
-    <img src={Checkin} width={450}></img>
-    <h2>
-      <div style={{ paddingTop: 100 }} id="ПРОЕКТ"> ПРОЕКТ </div>
-    </h2>
-    <h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-    </h3>
-
-    <h2>
-      <div style={{ paddingTop: 100 }} id="ТЕХНОЛОГИЯ"> ТЕХНОЛОГИЯ </div>
-    </h2>
-    <h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-    </h3>
-
-    <h2>
-      <div style={{ paddingTop: 100 }} id="ЕКИП"> ЕКИП </div>
-    </h2>
-    <h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-    </h3>
-
-    <h2>
-      <div style={{ paddingTop: 100 }} id="НОВИНИ"> НОВИНИ </div>
-    </h2>
-    <h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-    </h3>
-
-    <h2>
-      <div style={{ paddingTop: 100 }} id="КОНТАКТИ"> КОНТАКТИ </div>
-    </h2>
-    <h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam fugit provident obcaecati repellendus labore voluptate at iste, libero sint laboriosam porro, minus quis quas architecto deserunt mollitia necessitatibus adipisci officia.
-    </h3>
-
-    <div style={{ paddingTop: 100 }} id=""></div>
-
-
+    {/* <Card id={ids[0]} title={titles[0]} image={Checkin} text='https://checkin.ben.bg' width={650} /> */}
+    <Card id={ids[0]} title={titles[0]} image={Checkin} text='https://checkin.ben.bg' width={650} />
+    <Card id={ids[1]} title={titles[1]} image={Dnd} text='https://www.dnd.ben.bg' />
+    <Card id={ids[2]} title={titles[2]} image={Checkin} text='https://checkin.ben.bg' width={650} />
+    <Card id={ids[3]} title={titles[3]} image={Dnd} text='https://checkin.ben.bg' />
+    <Card id={ids[4]} title={titles[4]} image={Checkin} text='https://checkin.ben.bg' width={650} />
+    <Card id={ids[5]} title={titles[5]} image={Dnd} text='https://checkin.ben.bg' />
 
   </>
 }

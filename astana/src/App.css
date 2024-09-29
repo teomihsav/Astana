@@ -48,7 +48,7 @@
 	background-position: 0 100%;
 	background-size: 100% 3px;
 	background-repeat: repeat-x;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 .underlineHover:hover {
@@ -77,11 +77,21 @@
 	right: 0;
 	width: 100%;
 	padding: 1%;
+	z-index: 1;
+}
+.email-text {
+	position: relative;
+	color: white;
+	font-weight: 700;
+	padding-left: 5px;
+	padding-right: 25px;
+	padding-bottom: 8px;
 }
 .email {
 	display: flex;
 	color: white;
 	cursor: pointer;
+	align-items: flex-end;
 }
 .email:hover {
 	display: flex;

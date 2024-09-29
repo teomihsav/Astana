@@ -6,7 +6,7 @@ import email from '../../assets/svg/email.svg'
 // import SmoothScroll from '../SmoothScroll/SmoothScroll'
 
 const Menu = () => {
-  const menu = ['НАЧАЛО', 'ПРОЕКТ', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
+  const menu = ['Checkin Car Rental', 'Task Drag', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
 
   const [colorMenu, colorMenuSet] = useState<string>('')
   const [count, countSet] = useState<number>(0)
@@ -20,23 +20,21 @@ const Menu = () => {
     navigator.clipboard.writeText('contact@ben.bg')
     textSet('Copied')
   }
-  useEffect(() => {
-    const testArray = [1, 2, 3, 4, 5, 6, 7]
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    testArray.forEach((value, index): unknown =>
-      setTimeout(() => // value === arr.length ? countSet(0) : 
-        countSet(value), index * 1000)
-    )
-  }, [count === 7])
-
-
+  // useEffect(() => {
+  //   const testArray = [1, 2, 3, 4, 5, 6, 7]
+  //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  //   testArray.forEach((value, index): unknown =>
+  //     setTimeout(() => // value === arr.length ? countSet(0) : 
+  //       countSet(value), index * 1000)
+  //   )
+  // }, [count === 7])
 
   return <>
 
     <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
 
       <Logo />
-      <Logo />
+
       {
         menu.map(el =>
           <span key={el} style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -45,10 +43,10 @@ const Menu = () => {
         )
       }
 
-      <div style={{ position: 'relative', }}>
+      <div className='email-text'>
 
         <span style={{
-          position: 'absolute', bottom: '25px', fontSize: '12px', fontWeight: 700, color: 'gray',
+          position: 'absolute', bottom: '32px', fontSize: '12px', fontWeight: 700, color: 'lightgray',
           left: 0,
           right: 0,
           marginInline: 'auto',
