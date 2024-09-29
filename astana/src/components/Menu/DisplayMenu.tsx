@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { scrollToSmoothly } from '../../helpers/helpers'
 
 type propTypeMenu = {
@@ -12,7 +12,7 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   const [currentScroll, currentScrollSet] = useState<number>(() => window.scrollY)
   const [scrollEl, scrollElSet] = useState<number>(0)
   const [elementId, elementIdSet] = useState<string>()
-  const [arrScrollElPoints, arrScrollElPointsSet] = useState<number[]>([])
+  // const [arrScrollElPoints, arrScrollElPointsSet] = useState<number[]>([])
   // const arrScrollElPoints: number[] = []
   // get position on scroll
   useEffect(() => {
@@ -35,7 +35,8 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
       onClick={() => clickMenu(el)}
     >
 
-      <span className={(elementId ? elementId : colorMenu === el) && (scrollEl > 267 && currentScroll > scrollEl) ? 'underline' : 'underlineHover'}  >
+      {/* <span className={(elementId ? elementId : colorMenu === el) && (scrollEl > 267 && currentScroll > scrollEl) ? 'underline' : 'underlineHover'}  > */}
+      <span className={(colorMenu === el) ? 'underline' : 'underlineHover'}  >
 
         <span style={{ color: 'gray', }} className={colorMenu === el ? 'underline' : 'underlineHover'}
           onClick={(event: React.SyntheticEvent) => {
