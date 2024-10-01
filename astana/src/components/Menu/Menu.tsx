@@ -1,15 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import DisplayMenu from './DisplayMenu'
-import Logo from '../Logo/Logo'
+import Logo from '../Logo/LogoBen'
 // import phone from '../../assets/svg/phone.svg'
 import email from '../../assets/svg/email.svg'
 // import SmoothScroll from '../SmoothScroll/SmoothScroll'
 
 const Menu = () => {
-  const menu = ['Checkin Car Rental', 'Task Drag', 'ТЕХНОЛОГИЯ', 'ЕКИП', 'НОВИНИ', 'КОНТАКТИ']
+  const menu = [
+    { desc: 'Logo', el: <Logo /> },
+    { desc: 'Checkin Car Rental', el: '' },
+    { desc: 'Task Drag', el: '' },
+    { desc: 'ТЕХНОЛОГИЯ', el: '' },
+    { desc: 'ЕКИП', el: '' },
+    { desc: 'НОВИНИ', el: '' },
+    { desc: 'КОНТАКТИ', el: '' },
+  ]
 
   const [colorMenu, colorMenuSet] = useState<string>('')
-  const [count, countSet] = useState<number>(0)
+  // const [count, countSet] = useState<number>(0)
   const [text, textSet] = useState<string>('')
 
   const clickMenu = (id: string) => {
@@ -33,11 +41,9 @@ const Menu = () => {
 
     <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
 
-      <Logo />
-
       {
         menu.map(el =>
-          <span key={el} style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DisplayMenu el={el} clickMenu={clickMenu} colorMenu={colorMenu} />
           </span>
         )
