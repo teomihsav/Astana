@@ -1,3 +1,4 @@
+import link from '../../assets/svg/link.svg'
 
 interface CardProps {
   id: string
@@ -5,30 +6,37 @@ interface CardProps {
   text: string | undefined,
   image: string | undefined,
   width?: string | number | undefined
+  class: string
+  link: string
 }
 const Card = (props: CardProps) => {
-  return <>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // const [scrollActive, scrollActiveSet] = useState<number>(0)
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
+  //   document.querySelector<HTMLElement>('#animated-text-stripOneCardTitle')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+  // }, [window.scrollY])
+
+  return <div>
+
     <div id={props.id} className='animated'>
-      <h2>
-        <div style={{ marginTop: '100px' }} > {props.title === 'Logo' ? <></> : props.title} </div>
-      </h2>
+      {/* <div style={{ marginTop: '100px' }} > {props.title === 'Logo' ? <></> : <></>} </div> */}
       {props.title === 'Logo' ? <></> :
-        <div
-          style={{
-            borderRadius: '12px',
-            padding: '70px',
-            paddingBottom: '60px',
-            display: 'inline-block',
-            background: '#333',
-          }}
+        <div className='card'
+          id={props.class}
         >
-          <a href={props.text}>
-            <img style={{ borderRadius: '8px', border: '3px solid #5dd39e', boxShadow: '0px 0px 20px 0px black' }} src={props.image} width={props.width}></img>
+          <div className='textCard'>
+            {props.title}
+          </div>
+
+          <a href={props.link} >
+            <img src={link} className='svgLink' alt="phone contact" color={'white'} />
+            <img className='imgCard' src={props.image} width={props.width} />
           </a>
         </div>
       }
     </div>
-  </>
+  </div>
 }
 
 export default Card
