@@ -16,8 +16,8 @@ const Card = (props: CardProps) => {
         <div
           style={{
             borderRadius: '12px',
-            padding: '80px',
-            paddingBottom: '4px',
+            padding: '70px',
+            paddingBottom: '60px',
             display: 'inline-block',
             background: '#333',
           }}
