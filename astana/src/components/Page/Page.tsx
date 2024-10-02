@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import Card from '../Card/Card'
 import { cards } from '../../helpers/data';
 
@@ -7,6 +7,14 @@ const Page = () => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [, scrollActiveSet] = useState<number>(0)
+  useLayoutEffect(() => {
+    window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
+    document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(- 500)}px)`;
+    document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(500)}px)`;
+    document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(-500)}px)`;
+    document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(500)}px)`;
+  }, [])
+
   useEffect(() => {
     window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
     document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
@@ -17,7 +25,7 @@ const Page = () => {
   }, [window.scrollY])
 
   return <>
-    <div style={{ paddingTop: '0px', paddingBottom: '0%', }} >
+    <div>
       <span id='animated-text-strip'>
         Front-End Developer
       </span>
