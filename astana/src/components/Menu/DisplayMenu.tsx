@@ -31,14 +31,15 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
 
   return <div ref={ref}>
     <span
-      style={{ fontSize: '15px', fontWeight: 800, marginRight: '20px', }}
+      className='menu'
       onClick={() => clickMenu(el.desc)}
     >
 
       {/* <span className={(elementId ? elementId : colorMenu === el) && (scrollEl > 267 && currentScroll > scrollEl) ? 'underline' : 'underlineHover'}  > */}
       {/* <span className={(colorMenu === el) ? 'underline' : 'underlineHover'}  > */}
       <span>
-        <span style={{ color: 'gray', }} className={colorMenu === el.desc ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}
+        <span
+          className={colorMenu === el.desc ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}
           onClick={(event: React.SyntheticEvent) => {
             event.preventDefault()
             const element = document.getElementById(el.desc)

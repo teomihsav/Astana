@@ -52,7 +52,7 @@ const Menu = () => {
       <div className='email-text'>
 
         <span style={{
-          position: 'absolute', bottom: '30px', fontSize: '12px', fontWeight: 700, color: 'lightgray',
+          position: 'absolute', bottom: '70%', fontSize: '1vw', fontWeight: 700, color: 'lightgray',
           left: 0,
           right: 0,
           marginInline: 'auto',
@@ -69,7 +69,7 @@ const Menu = () => {
           onMouseOver={() => textSet('Click to Copy')}
           onMouseLeave={() => textSet('')}
         >
-          <img src={email} style={{ marginLeft: '30px', marginRight: '5px' }} alt="phone contact" color={'white'} />
+          <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
           <div className='phoneText'>contact@ben.bg</div>
           {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
         </span>

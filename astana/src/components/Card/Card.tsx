@@ -12,9 +12,12 @@ interface CardProps {
 const Card = (props: CardProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   // const [scrollActive, scrollActiveSet] = useState<number>(0)
+
+  // const winHeight = useRef(window.innerHeight)
   // useEffect(() => {
+  //   // const element = document.querySelector<HTMLElement>('.textDesc')
   //   window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-  //   document.querySelector<HTMLElement>('#animated-text-stripOneCardTitle')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+  //   document.querySelector<HTMLElement>('.textDesc')!.style.transform = `translateY(${Number(window.scrollY <= 230 ? 100 : window.scrollY)}px)`;
   // }, [window.scrollY])
 
   return <div>
@@ -25,8 +28,14 @@ const Card = (props: CardProps) => {
         <div className='card'
           id={props.class}
         >
-          <div className='textCard'>
-            {props.title}
+          <div>
+            <div className='textCard'>
+              {props.title}
+            </div>
+
+            <div className='textDesc'>
+              {props.text}
+            </div>
           </div>
 
           <div style={{ position: 'relative', }}>
@@ -38,6 +47,7 @@ const Card = (props: CardProps) => {
 
         </div>
       }
+      {/* {window.scrollY} */}
     </div>
   </div>
 }
