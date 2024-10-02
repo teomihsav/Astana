@@ -20,7 +20,7 @@ const Card = (props: CardProps) => {
   return <div>
 
     <div id={props.id} className='animated'>
-      {/* <div style={{ marginTop: '100px' }} > {props.title === 'Logo' ? <></> : <></>} </div> */}
+      {/* <div style={{ marginTop: '100px', marginBottom: '100px', }} > {props.title === 'Logo' ? <></> : <></>} </div> */}
       {props.title === 'Logo' ? <></> :
         <div className='card'
           id={props.class}

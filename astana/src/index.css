@@ -41,41 +41,6 @@ h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
 }
-.animated,
-p {
-	animation: fade ease-in both;
-	animation-timeline: view();
-	animation-range: entry 30% cover 95%;
-	/* animation-range: entry 50% cover 50%; */
-	margin-top: 7%;
-	display: flex;
-	justify-content: center;
-}
-
-@keyframes fade {
-	/* from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	} */
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		transform: translate();
-	}
-}
 
 button {
 	border-radius: 8px;

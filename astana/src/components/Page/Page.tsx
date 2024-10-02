@@ -16,7 +16,7 @@ const Page = () => {
   }, [window.scrollY])
 
   return <>
-    <div style={{ paddingTop: '0%', paddingBottom: '5%', }} >
+    <div style={{ paddingTop: 'px', paddingBottom: '0%', }} >
       <span id='animated-text-strip'>
         Front-End Developer
       </span>

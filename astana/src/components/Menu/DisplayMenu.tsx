@@ -42,10 +42,7 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
           onClick={(event: React.SyntheticEvent) => {
             event.preventDefault()
             const element = document.getElementById(el.desc)
-            // console.log('Offset: ', colorMenu, el, winHeight, winWidth, element?.offsetHeight, element?.offsetTop, Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
-            // scrollToSmoothly(0, 500)
-            // scrollToSmoothly(element?.offsetTop as number, 900)
-            scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70, 900)
+            scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2), 900)
           }}
         >
           {el.desc === 'Logo' ? el.el : el.desc}
