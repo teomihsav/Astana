@@ -5,20 +5,6 @@
 	text-align: center;
 }
 
-.logo {
-	/* padding: 1.5em; */
-	will-change: filter;
-	transition: filter 300ms;
-	height: 3vw;
-	width: 4vw;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #707070aa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #707070aa);
-}
-
 @keyframes logo-spin {
 	from {
 		transform: rotate(0deg);
@@ -82,7 +68,7 @@
 .menu {
 	font-size: 1.1vw;
 	font-weight: 800;
-	margin-right: 20px;
+	margin-right: 1vw;
 	color: rgb(177, 177, 177);
 }
 .underline {
@@ -372,7 +358,7 @@
 	font-weight: 700;
 	padding-left: 0px;
 	/* padding-right: 25px; */
-	padding-bottom: 5px;
+	padding-bottom: 0.7%;
 }
 .email {
 	display: flex;
@@ -393,5 +379,18 @@
 	/* position: absolute; */
 	/* right: 90%; */
 	/* top: 45%; */
-	padding-bottom: 1.5%;
+	padding-bottom: 1.9%;
+}
+
+.logo {
+	height: 2.8vw;
+	width: 3.8vw;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+.logo:hover {
+	filter: drop-shadow(0 0 2em #707070aa);
+}
+.logo.react:hover {
+	filter: drop-shadow(0 0 2em #707070aa);
 }
