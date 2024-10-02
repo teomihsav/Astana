@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
 // import phone from '../../assets/svg/phone.svg'
 import email from '../../assets/svg/email.svg'
+import DropDown from '../DropDown/DropDown'
 // import SmoothScroll from '../SmoothScroll/SmoothScroll'
 
 const Menu = () => {
@@ -37,47 +38,60 @@ const Menu = () => {
   //   )
   // }, [count === 7])
 
+  // useEffect(() => {
+  //   window.innerWidth > 900
+  // })
   return <>
 
-    <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
+    {
+      window.innerWidth > 900 ? <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
+        {
+          menu.map(el =>
+            <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <DisplayMenu el={el} clickMenu={clickMenu} colorMenu={colorMenu} />
+            </span>
+          )
+        }
 
-      {
-        menu.map(el =>
-          <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <DisplayMenu el={el} clickMenu={clickMenu} colorMenu={colorMenu} />
+        <div className='email-text'>
+
+          <span style={{
+            position: 'absolute', bottom: '70%', fontSize: '1vw', fontWeight: 700, color: 'lightgray',
+            left: 0,
+            right: 0,
+            marginInline: 'auto',
+            width: 'fitContent',
+
+          }}>
+            {text}
           </span>
-        )
-      }
 
-      <div className='email-text'>
+          <span
+            role='button'
+            className='email'
+            onClick={copyToCLipboard}
+            onMouseOver={() => textSet('Click to Copy')}
+            onMouseLeave={() => textSet('')}
+          >
+            <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
+            <div className='phoneText'>contact@ben.bg</div>
+            {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
+          </span>
 
-        <span style={{
-          position: 'absolute', bottom: '70%', fontSize: '1vw', fontWeight: 700, color: 'lightgray',
-          left: 0,
-          right: 0,
-          marginInline: 'auto',
-          width: 'fitContent',
-
-        }}>
-          {text}
-        </span>
-
-        <span
-          role='button'
-          className='email'
-          onClick={copyToCLipboard}
-          onMouseOver={() => textSet('Click to Copy')}
-          onMouseLeave={() => textSet('')}
-        >
-          <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
-          <div className='phoneText'>contact@ben.bg</div>
-          {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
-        </span>
-
+        </div>
       </div>
-
-    </div>
-
+        : <>
+          {
+            menu.map(el =>
+              // <div key={el.desc} >
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <DropDown title={el.desc} />
+              </div>
+              // </div>
+            )
+          }
+        </>
+    }
   </>
 }
 
