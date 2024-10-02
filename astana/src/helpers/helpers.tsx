@@ -9,7 +9,7 @@ export function scrollToSmoothly(pos: number, time: number) {
     const progress = currentTime - start;
 
     if (currentPos < pos) {
-      console.log('Position: ', progress, ((pos - currentPos) * progress / time) + currentPos)
+      // console.log('Position: ', progress, ((pos - currentPos) * progress / time) + currentPos)
       window.scrollTo(0, easeInOutCubic(progress, currentPos, pos - currentPos, time)) //((pos - currentPos) * progress / time) + currentPos);
     } else {
       window.scrollTo(0, easeInOutCubic(progress, currentPos, pos - currentPos, time));

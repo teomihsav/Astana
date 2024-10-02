@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
 // import phone from '../../assets/svg/phone.svg'
@@ -20,6 +20,7 @@ const Menu = () => {
   const [colorMenu, colorMenuSet] = useState<string>('')
   // const [count, countSet] = useState<number>(0)
   const [text, textSet] = useState<string>('')
+  const [widthInn, widthInnSet] = useState<string>('')
 
   const clickMenu = (id: string) => {
     console.log(id)
@@ -38,13 +39,17 @@ const Menu = () => {
   //   )
   // }, [count === 7])
 
-  // useEffect(() => {
-  //   window.innerWidth > 900
-  // })
+  useLayoutEffect(() => {
+    window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
+    console.log('Width: ', window.innerWidth)
+    // widthInnSet(window.innerWidth.toString())
+    // window.innerWidth > 900
+  }, [window.innerWidth])
+
   return <>
 
     {
-      window.innerWidth > 900 ? <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
+      <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
         {
           menu.map(el =>
             <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -53,7 +58,7 @@ const Menu = () => {
           )
         }
 
-        <div className='email-text'>
+        <div className={window.innerWidth > 900 ? 'email-text' : ''}>
 
           <span style={{
             position: 'absolute', bottom: '70%', fontSize: '1vw', fontWeight: 700, color: 'lightgray',
@@ -63,7 +68,7 @@ const Menu = () => {
             width: 'fitContent',
 
           }}>
-            {text}
+            {window.innerWidth > 900 ? text : ''}
           </span>
 
           <span
@@ -73,24 +78,28 @@ const Menu = () => {
             onMouseOver={() => textSet('Click to Copy')}
             onMouseLeave={() => textSet('')}
           >
-            <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
-            <div className='phoneText'>contact@ben.bg</div>
+            {
+              window.innerWidth > 900 && <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
+            }
+            {
+              window.innerWidth < 900 ?
+                <img src={email} width={'100%'} style={{}} className='' alt="phone contact" color={'white'} />
+                : <div className='phoneText'>contact@ben.bg</div>
+            }
             {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
           </span>
 
         </div>
       </div>
-        : <>
-          {
-            menu.map(el =>
-              // <div key={el.desc} >
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <DropDown title={el.desc} />
-              </div>
-              // </div>
-            )
-          }
-        </>
+      // : <div className='navbar '>
+      //   {
+      //     menu.map(el =>
+      //       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+      //         <DropDown el={el} clickMenu={clickMenu} colorMenu={colorMenu} />
+      //       </div>
+      //     )
+      //   }
+      // </div>
     }
   </>
 }
