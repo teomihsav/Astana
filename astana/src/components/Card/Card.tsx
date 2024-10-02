@@ -29,10 +29,13 @@ const Card = (props: CardProps) => {
             {props.title}
           </div>
 
-          <a href={props.link} >
-            <img src={link} className='svgLink' alt="phone contact" color={'white'} />
-            <img className='imgCard' src={props.image} width={props.width} />
-          </a>
+          <div style={{ position: 'relative', }}>
+            <a href={props.link} >
+              <img className='imgCard' src={props.image} width={props.width} />
+              <img src={link} className='svgLink' alt="phone contact" color={'white'} />
+            </a>
+          </div>
+
         </div>
       }
     </div>
