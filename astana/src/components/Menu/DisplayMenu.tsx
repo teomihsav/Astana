@@ -1,6 +1,5 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { scrollToSmoothly } from '../../helpers/helpers'
-import Dot from '../Logo/Dot'
 export type propTypeMenu = {
   el: { desc: string, el: string | ReactNode }
   clickMenu: (id: string) => void
@@ -9,7 +8,7 @@ export type propTypeMenu = {
 const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   const winHeight = useRef(window.innerHeight)
   const ref = useRef(null);
-  const [currentScroll, currentScrollSet] = useState<number>(() => window.scrollY)
+  const [, currentScrollSet] = useState<number>(() => window.scrollY)
   // const [scrollEl, scrollElSet] = useState<number>(0)
   const [elementId, elementIdSet] = useState<string>()
   // const [arrScrollElPoints, arrScrollElPointsSet] = useState<number[]>([])

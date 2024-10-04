@@ -1,5 +1,7 @@
 import Checkin from '../assets/checkin.png'
 import Dnd from '../assets/dnd1.png'
+import Signage from '../assets/signage.png'
+import Contact from '../components/Contact/Contact'
 
 export const cards = [
   {
@@ -19,13 +21,42 @@ export const cards = [
     stand: false
   },
   {
-    id: 'ТЕХНОЛОГИЯ',
-    title: 'ТЕCar rental check in app for full fill missing data and add credit card and additional drivers.ХНОЛОГИЯ',
-    text: 'Redux, hooks', link: 'https://checkin.ben.bg', image: Checkin, width: 450, class: 'animated-text-stripOneCardTitle',
+    id: 'Fast Track',
+    title: 'Clients rented cars pick up shown on screen',
+    text: 'Automation web app for showing clients their ready for taken hired vehicles. The web app is created from scratch with Vite, React. On the airport company counter TV are displayed names of clients which vehicles are ready for taking. The web app generates pages end rows dynamically depending how many clients vehicles are ready in the current hour, TV resolution is changed or zoom in the browser is changed and after the last “n” pages sticks a map page at the end.', link: 'https://checkin.ben.bg/?app=signage',
+    image: Signage,
+    width: 450,
+    class: 'animated-text-stripOneCardTitle',
     stand: true
   },
-  // 'ТЕХНОЛОГИЯ',
-  // 'ЕКИП',
-  // 'НОВИНИ',
-  // 'КОНТАКТИ'
+  {
+    id: 'Contact',
+    title: '',
+    text: '',
+    link: '',
+    image: <Contact />,
+    width: '',
+    class: 'animated-text-stripOneCardTitle',
+    stand: false
+  },
+  {
+    id: '',
+    title: '',
+    text: '',
+    link: '',
+    image: '',
+    width: '',
+    class: 'animated-text-stripOneCardTitle',
+    stand: false
+  },
+  {
+    id: '',
+    title: '',
+    text: '',
+    link: '',
+    image: '',
+    width: '',
+    class: 'animated-text-stripOneCardTitle',
+    stand: false
+  },
 ]

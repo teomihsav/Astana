@@ -101,14 +101,6 @@
 .logoUnderline {
 	cursor: pointer;
 }
-.phoneText {
-	color: rgb(156, 156, 156);
-	font-weight: 700;
-	font-size: 1.3vw;
-	padding-left: 5px;
-	padding-right: 25px;
-	padding-top: 10px;
-}
 
 .navbar {
 	overflow: hidden;
@@ -280,14 +272,10 @@
 }
 .card {
 	border-radius: 12px;
-	padding: 5px;
-	/* padding-top: 40px; */
+	padding: 0px;
+	padding-left: 25px;
 	padding-bottom: 0px;
-	display: flex;
-	justify-content: space-between;
 	background: #333;
-	overflow: hidden;
-	width: 80%;
 }
 .textCard {
 	font-size: 1.5vw;
@@ -343,6 +331,7 @@
 	opacity: 0.5;
 	/* width: 98%; */
 }
+/* SVG image into the app images */
 .svgLink {
 	position: absolute;
 	opacity: 0.5;
@@ -357,34 +346,42 @@
 	opacity: 0.5;
 }
 
+/* Contact email on bottom classes */
 .email-text {
 	position: relative;
 	color: white;
 	font-weight: 700;
-	padding-left: 0px;
-	/* padding-right: 25px; */
-	padding-bottom: 0.7%;
+	padding: 25px;
 }
 .email {
+	position: relative;
 	display: flex;
-	color: rgb(156, 156, 156);
+	color: white;
 	cursor: pointer;
 	align-items: flex-end;
 	font-size: 1.3vw;
 	margin-left: 5%;
 }
 .email:hover {
+	position: relative;
 	display: flex;
+	color: white;
 	cursor: pointer;
-	color: #5dd39e;
-	filter: drop-shadow(0 0 1em #ffffffaa);
-	text-decoration: none;
+	align-items: flex-end;
+	font-size: 1.3vw;
+	margin-left: 5%;
+}
+.emailText {
+	color: white;
+	font-weight: 700;
+	font-size: 1.3vw;
+	padding-left: 5px;
+	padding-right: 25px;
 }
 .svgEmail {
-	/* position: absolute; */
-	/* right: 90%; */
-	/* top: 45%; */
-	padding-bottom: 1.9%;
+	position: absolute;
+	right: 100%;
+	top: 30%;
 }
 
 .logo {
