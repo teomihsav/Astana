@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import React, { ReactNode, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { scrollToSmoothly } from '../../helpers/helpers'
 export type propTypeMenu = {
   el: { desc: string, el: string | ReactNode }
@@ -8,25 +8,16 @@ export type propTypeMenu = {
 const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   const winHeight = useRef(window.innerHeight)
   const ref = useRef(null);
-  const [, currentScrollSet] = useState<number>(() => window.scrollY)
+  // const [currentScroll, currentScrollSet] = useState<number>(() => window.scrollY)
   // const [scrollEl, scrollElSet] = useState<number>(0)
-  const [elementId, elementIdSet] = useState<string>()
-  // const [arrScrollElPoints, arrScrollElPointsSet] = useState<number[]>([])
-  // const arrScrollElPoints: number[] = []
-  // get position on scroll
-  useEffect(() => {
-    // console.log('Scroll: ', 'colorMenu:', colorMenu, 'el: ', el, window.scrollY)
-
-    const element = document.getElementById(el.desc)
-    // arrScrollElPointsSet([...arrScrollElPoints, Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70])
-
-    // console.log('Element: ', element?.id, el, currentScroll, Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
-    // arrScrollElPoints.push(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
-    currentScrollSet(window.scrollY)
-    // scrollElSet(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
-    elementIdSet(element?.id)
-  }, [window.scrollY, elementId,])
-  // console.log(arrScrollElPoints)
+  // const [elementId, elementIdSet] = useState<string>()
+  // // get position on scroll
+  // useLayoutEffect(() => {
+  //   const element = document.getElementById(el.desc)
+  //   currentScrollSet(window.scrollY)
+  //   scrollElSet(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
+  //   elementIdSet(element?.id)
+  // }, [window.scrollY, elementId, scrollEl])
 
   return <div ref={ref}>
     <span
@@ -52,8 +43,8 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
 
       </span>
     </span>
-
-    {/* {elementId} */}
+    {/* {currentScroll} '   '
+    {scrollEl} */}
 
   </div>
 }

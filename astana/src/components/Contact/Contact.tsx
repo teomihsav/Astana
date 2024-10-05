@@ -1,24 +1,26 @@
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import email from '../../assets/svg/email.svg'
 
 const Contact = () => {
   const [text, textSet] = useState<string>('')
+  const [, widthInnSet] = useState<string>('')
+
+  useLayoutEffect(() => {
+    window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
+    console.log('Width: ', window.innerWidth)
+    // widthInnSet(window.innerWidth.toString())
+    // window.innerWidth > 1000
+  }, [window.innerWidth])
 
   const copyToCLipboard = () => {
     navigator.clipboard.writeText('contact@ben.bg')
     textSet('Copied')
   }
 
-  return <div className={window.innerWidth > 900 ? 'email-text' : ''}>
-    <span style={{
-      position: 'absolute', bottom: '70%', fontSize: '1vw', fontWeight: 700, color: 'lightgray',
-      left: 0,
-      right: 0,
-      marginInline: 'auto',
-      width: 'fitContent',
-
-    }}>
-      {window.innerWidth > 900 ? text : ''}
+  return <div className={window.innerWidth > 1000 ? 'email-text' : 'email-text'}>
+    <span className='textPopUp'>
+      {/* {window.innerWidth > 1000 ? text : ''} */}
+      {text}
     </span>
 
     <span
@@ -29,12 +31,14 @@ const Contact = () => {
       onMouseLeave={() => textSet('')}
     >
       {
-        window.innerWidth > 900 && <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
+        // window.innerWidth > 1000 && 
+        <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
       }
       {
-        window.innerWidth < 900 ?
-          <img src={email} width={'100%'} style={{}} className='' alt="phone contact" color={'white'} />
-          : <div className='emailText'>contact@ben.bg</div>
+        // window.innerWidth < 1000 ?
+        // <img src={email} width={'100%'} style={{}} className='' alt="phone contact" color={'white'} />
+        // : 
+        <div className='emailText'>contact@ben.bg</div>
       }
       {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
     </span>

@@ -5,8 +5,8 @@ import Logo from '../Logo/LogoBen'
 const Menu = () => {
   const menu = [
     { desc: 'Logo', el: <Logo /> },
-    { desc: 'Checkin Car Rental', el: '' },
-    { desc: 'Task Drag', el: '' },
+    { desc: 'Checkin Car Rental', el: '', id: 'Checkin_Car_Rental' },
+    { desc: 'Task Drag', el: '', id: 'Task_Drag' },
     { desc: 'Fast Track', el: '' },
     { desc: 'ЕКИП', el: '' },
     { desc: 'НОВИНИ', el: '' },
@@ -36,7 +36,7 @@ const Menu = () => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
     console.log('Width: ', window.innerWidth)
     // widthInnSet(window.innerWidth.toString())
-    // window.innerWidth > 900
+    // window.innerWidth > 1000
   }, [window.innerWidth])
 
   return <>
