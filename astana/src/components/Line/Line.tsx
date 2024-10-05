@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Line = (props: { id: string }) => {
 
@@ -19,6 +19,7 @@ const Line = (props: { id: string }) => {
 
     window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
     const el = document.querySelector<HTMLElement>('#' + props.id)
+    // console.log('elem', props.id, el)
     elemSet(Number(el))
     function isScrolledIntoView(el: HTMLElement) {
       const rect = el.getBoundingClientRect();
@@ -32,7 +33,7 @@ const Line = (props: { id: string }) => {
       return isVisible;
     }
 
-    console.log('isScrolledIntoView', isScrolledIntoView(el))
+    // console.log('isScrolledIntoView', isScrolledIntoView(el))
     bolSet(Number(isScrolledIntoView(el)))
   }, [window.scrollY])
 

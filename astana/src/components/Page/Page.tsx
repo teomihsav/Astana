@@ -27,6 +27,7 @@ const Page = () => {
 
   return <>
     <TextAbove />
+
     {cardsData.map(el => <Card  {...el} />)}
 
   </>

@@ -7,7 +7,7 @@ const Contact = () => {
 
   useLayoutEffect(() => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
-    console.log('Width: ', window.innerWidth)
+    // console.log('Width: ', window.innerWidth)
     // widthInnSet(window.innerWidth.toString())
     // window.innerWidth > 1000
   }, [window.innerWidth])

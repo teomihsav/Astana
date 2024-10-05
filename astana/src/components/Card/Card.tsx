@@ -10,35 +10,8 @@ const Card = (props: CardProps) => {
   const [bol, bolSet] = useState<number>(0)
 
   const winHeight = useRef(window.innerHeight)
-  // useEffect(() => {
-  //   // const element = document.querySelector<HTMLElement>('.textDesc')
-  //   window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-  //   document.querySelector<HTMLElement>('.textDesc')!.style.transform = `translateY(${Number(window.scrollY <= 230 ? 100 : window.scrollY)}px)`;
-  //   const el = document.querySelector<HTMLElement>('#animated-text-stripOneCardTitleOne')!;
-  //   elemSet(Number(el))
-  //   function isScrolledIntoView(el: HTMLElement) {
-  //     const rect = el.getBoundingClientRect();
-  //     const elemTop = rect.top;
-  //     const elemBottom = rect.bottom;
-
-  //     // Only completely visible elements return true:
-  //     const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-  //     // Partially visible elements return true:
-  //     //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-  //     return isVisible;
-  //   }
-
-  //   console.log('isScrolledIntoView', isScrolledIntoView(el))
-  //   bolSet(Number(isScrolledIntoView(el)))
-  // }, [window.scrollY])
-
 
   return <div>
-
-    {/* {'Element: '} : {elem}
-    {'WinHeight '}: {winHeight.current} '   '
-    {'Scroll '}:{window.scrollY} '   '
-    {'Result '}:{winHeight.current - window.scrollY} */}
 
     <div id={props.id} className='animated'>
       {/* <div style={{ marginTop: '100px', marginBottom: '100px', }} > {props.title === 'Logo' ? <></> : <></>} </div> */}
