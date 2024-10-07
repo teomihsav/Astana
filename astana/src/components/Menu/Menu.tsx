@@ -8,8 +8,8 @@ const Menu = () => {
     { desc: 'Checkin Car Rental', el: '', id: 'Checkin_Car_Rental' },
     { desc: 'Task Drag', el: '', id: 'Task_Drag' },
     { desc: 'Fast Track', el: '' },
-    { desc: 'ЕКИП', el: '' },
-    { desc: 'НОВИНИ', el: '' },
+    { desc: 'Damages', el: '' },
+    { desc: 'Log Time', el: '' },
     { desc: 'Contact', el: '' },
     { desc: '', el: '' },
   ]

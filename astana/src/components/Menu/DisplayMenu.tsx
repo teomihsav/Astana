@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { ReactNode, useRef } from 'react'
 import { scrollToSmoothly } from '../../helpers/helpers'
 export type propTypeMenu = {
   el: { desc: string, el: string | ReactNode }

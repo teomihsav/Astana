@@ -71,7 +71,7 @@
 }
 
 .menu {
-	font-size: 1.1vw;
+	font-size: 1.1rem;
 	font-weight: 800;
 	margin-right: 1vw;
 	color: rgb(177, 177, 177);
@@ -109,7 +109,7 @@
 	top: 0;
 	right: 0;
 	width: 100%;
-	padding: 1%;
+	padding: 10px;
 	z-index: 1;
 	box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
 }
@@ -279,12 +279,18 @@
 	display: flex;
 	align-items: flex-start;
 }
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	padding-right: 10px;
+}
 .textCard {
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 	text-align: right;
-	padding-top: 20px;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-top: 1%;
+	/* padding-left: 1%; */
+	padding-right: 1%;
 	opacity: 1;
 }
 
@@ -296,25 +302,24 @@
 }
 .textDesc {
 	position: relative;
-	font-size: 1.3vw;
-	top: 60px;
-	/* padding-top: -320px; */
+	font-size: 1rem;
+	padding-top: 5%;
 	text-align: right;
 	padding-left: 2%;
 	opacity: 0.4;
 	transition: opacity 0.5s ease-in;
 
 	transition: transform 500ms;
-	width: 95%;
+	width: fit-content;
 }
 .textDesc:hover {
-	font-size: 1.3vw;
+	font-size: 1rem;
 	opacity: 1;
 	transition: opacity 0.5s ease-in;
 	color: rgb(202, 202, 202);
 }
 .textDesc:not(:hover) {
-	font-size: 1.3vw;
+	font-size: 1rem;
 	opacity: 0.4;
 	transition: opacity 0.5s ease-in;
 	color: rgb(202, 202, 202);
@@ -340,7 +345,7 @@
 	opacity: 0.5;
 	transition: opacity 0.5s ease-in;
 	right: 3%;
-	top: 10px;
+	top: 3%;
 }
 .svgLink:hover {
 	position: absolute;

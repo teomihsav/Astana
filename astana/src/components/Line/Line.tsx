@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Line = (props: { id: string }) => {
 
-  const [scrollActive, scrollActiveSet] = useState<number>(0)
-  const [elem, elemSet] = useState<number>(0)
+  const [, scrollActiveSet] = useState<number>(0)
+  const [, elemSet] = useState<number>(0)
   const [bol, bolSet] = useState<number>(0)
 
-  const winHeight = useRef(window.innerHeight)
+  // const winHeight = useRef(window.innerHeight)
 
   // useEffect(() => {
   //   const el = document.querySelector<HTMLElement>('#' + props.id)
@@ -34,7 +34,7 @@ const Line = (props: { id: string }) => {
     }
 
     // console.log('isScrolledIntoView', isScrolledIntoView(el))
-    bolSet(Number(isScrolledIntoView(el)))
+    bolSet(Number(isScrolledIntoView(el as HTMLElement)))
   }, [window.scrollY])
 
   return <div id={props.id} className='lineContainer'>
