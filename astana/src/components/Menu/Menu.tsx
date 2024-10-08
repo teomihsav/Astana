@@ -59,7 +59,6 @@ const Menu = () => {
       </div>
     }
     <LangButton />
-    <LangDropDown />
   </>
 }
 

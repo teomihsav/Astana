@@ -1,6 +1,6 @@
 export const bg = {
   "CheckinCarRental": "Наемане на кола",
-  "TaskDrag": "Влачене на задачи",
+  "TaskDrag": "Влачене",
   "FastTrack": "Бърза пътека",
   "Damages": "Повреди",
   "LogTime": "Лог на време",

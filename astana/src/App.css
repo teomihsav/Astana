@@ -417,12 +417,12 @@
 	transition: opacity 0.5s ease-in;
 } */
 .langBtn {
-	position: absolute;
+	position: fixed;
 	top: 1.7rem;
-	right: 3.6rem;
+	right: 1.5rem;
 	z-index: 1;
 	width: 30px;
-	height: 70px;
+	height: 40px;
 	opacity: 0.5;
 	transition: opacity 0.5s ease-in;
 	cursor: pointer;
@@ -434,13 +434,14 @@
 .langBtn:hover + .langBox {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
+	visibility: visible;
 }
 
 .langBox {
-	position: absolute;
+	position: fixed;
 	border-radius: 5px;
-	top: 4rem;
-	right: 3rem;
+	top: 3.5rem;
+	right: 0.8rem;
 	z-index: 1;
 	opacity: 0;
 	width: 30px;
@@ -450,10 +451,12 @@
 	transition: opacity 0.5s ease-in;
 	padding: 10px;
 	cursor: pointer;
+	visibility: hidden;
 }
 .langBox:hover {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
+	visibility: visible;
 }
 .flag {
 	opacity: 0.5;
@@ -462,6 +465,19 @@
 .flag:hover {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
+}
+.toolTipCont {
+	position: absolute;
+	top: 5rem;
+	left: -1.5rem;
+	width: 100px;
+}
+.toolTip {
+	top: 5rem;
+	left: -1rem;
+	font-size: 0.9rem;
+	color: rgb(119, 119, 119);
+	transition: opacity 0.5s ease-in;
 }
 .logo {
 	/* height: 2.8vw;
