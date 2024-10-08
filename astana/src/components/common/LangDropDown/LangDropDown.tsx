@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { languages } from "../../../helpers/cardsData"
 import { useTranslation } from "react-i18next"
 const LangDropDown = () => {

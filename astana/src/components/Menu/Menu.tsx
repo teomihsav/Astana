@@ -1,7 +1,6 @@
 import { useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
-import LangDropDown from '../common/LangDropDown/LangDropDown'
 import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
 
