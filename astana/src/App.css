@@ -103,6 +103,7 @@
 }
 
 .navbar {
+	position: relative;
 	overflow: hidden;
 	background-color: #333;
 	position: fixed;
@@ -304,6 +305,7 @@
 	position: relative;
 	font-size: 1rem;
 	padding-top: 5%;
+	padding-bottom: 2%;
 	text-align: right;
 	padding-left: 2%;
 	opacity: 0.4;
@@ -407,12 +409,66 @@
 	display: block;
 	justify-content: center;
 }
+/* .langBtn {
+	position: absolute;
+	top: 2rem;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+} */
+.langBtn {
+	position: absolute;
+	top: 1.7rem;
+	right: 3.6rem;
+	z-index: 1;
+	width: 30px;
+	height: 70px;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+}
+.langBtn:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
+.langBtn:hover + .langBox {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
 
+.langBox {
+	position: absolute;
+	border-radius: 5px;
+	top: 4rem;
+	right: 3rem;
+	z-index: 1;
+	opacity: 0;
+	width: 30px;
+	height: 60px;
+	border: 1px solid rgb(78, 78, 78);
+	background-color: rgb(41, 41, 41);
+	transition: opacity 0.5s ease-in;
+	padding: 10px;
+	cursor: pointer;
+}
+.langBox:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
+.flag {
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+}
+.flag:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
 .logo {
-	height: 2.8vw;
-	width: 3.8vw;
+	/* height: 2.8vw;
+	width: 3.8vw; */
 	margin-top: 10px;
 	margin-right: 5px;
+	margin-left: 10px;
 }
 .logo:hover {
 	filter: drop-shadow(0 0 2em #707070aa);

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import link from '../../assets/svg/link.svg'
 import { CardProps } from '../../types/types'
 
@@ -9,6 +10,9 @@ const Card = (props: CardProps) => {
   // const [bol, bolSet] = useState<number>(0)
 
   // const winHeight = useRef(window.innerHeight)
+  useEffect(() => {
+
+  }, [window.innerWidth < 1000])
 
   return <>
 
@@ -23,7 +27,7 @@ const Card = (props: CardProps) => {
             </div>
 
             <div className='textDesc'>
-              {props.text}``
+              {props.text}
             </div>
           </div>
           <div style={{ position: 'relative', }}>

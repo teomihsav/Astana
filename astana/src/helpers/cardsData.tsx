@@ -2,9 +2,15 @@ import Checkin from '../assets/checkin.png'
 import Dnd from '../assets/dnd1.png'
 import Signage from '../assets/signage.png'
 import Contact from '../components/Contact/Contact'
-import Line from '../components/Line/Line'
+import Line from '../components/common/Line/Line'
 import Damages from '../assets/damages.png'
 import Logger from '../assets/logger.png'
+import en from '../assets/en.png'
+import bg from '../assets/bg.png'
+
+export const state = {
+  lang: 'en',
+}
 
 export const cardsData = [
   {
@@ -137,3 +143,8 @@ export const cardsData = [
     empty: true,
   },
 ]
+
+export const languages = {
+  en: en,
+  bg: bg,
+}

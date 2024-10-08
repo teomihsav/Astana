@@ -1,17 +1,22 @@
 import { useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
+import LangDropDown from '../common/LangDropDown/LangDropDown'
+import { useTranslation } from 'react-i18next'
+import LangButton from '../common/LangButton/LangButton'
 
 const Menu = () => {
+  const { t } = useTranslation()
+
   const menu = [
-    { desc: 'Logo', el: <Logo /> },
-    { desc: 'Checkin Car Rental', el: '', id: 'Checkin_Car_Rental' },
-    { desc: 'Task Drag', el: '', id: 'Task_Drag' },
-    { desc: 'Fast Track', el: '' },
-    { desc: 'Damages', el: '' },
-    { desc: 'Log Time', el: '' },
-    { desc: 'Contact', el: '' },
-    { desc: '', el: '' },
+    { desc: 'Logo', el: 'Logo', id: <Logo /> },
+    { desc: t("CheckinCarRental"), el: 'Checkin Car Rental', },
+    { desc: t('TaskDrag'), el: 'Task Drag', },
+    { desc: t('FastTrack'), el: 'Fast Track' },
+    { desc: t('Damages'), el: 'Damages' },
+    { desc: t('LogTime'), el: 'Log Time' },
+    { desc: t('Contact'), el: 'Contact' },
+    // { desc: 'Lang', el: <LangDropDown /> },
   ]
 
   const [colorMenu, colorMenuSet] = useState<string>('')
@@ -50,8 +55,11 @@ const Menu = () => {
             </span>
           )
         }
+
       </div>
     }
+    <LangButton />
+    <LangDropDown />
   </>
 }
 
