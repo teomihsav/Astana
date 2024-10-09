@@ -140,19 +140,31 @@
 		transform: translate(100%, 0);
 	}
 }
+@keyframes glow {
+	70% {
+		/* color: #5dd39e; */
+		text-shadow: 0 0 10px #5dd39e;
+	}
+	50% {
+		/* color: #5dd39e; */
+		text-shadow: 0 0 0px #5dd39e;
+		/* 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+	}
+}
 #animated-text-strip {
 	display: flex;
 	flex-flow: row nowrap;
 	overflow: hidden;
 	justify-content: flex-start;
 	margin-top: 10%;
-	color: #5dd39e;
 	font-size: 4vw;
+	color: #5dd39e;
 	font-weight: 1000;
 	background: #292929;
 	padding: 3px;
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
 	/* width: fit-content; */
+	animation: glow 2s ease-in;
 }
 #animated-text-strip-reversed {
 	display: flex;
@@ -552,7 +564,7 @@
 
 .para {
 	position: absolute;
-	top: 21%;
+	top: 15%;
 	left: 3.12%;
 	animation: animate 1.5s ease-in-out;
 	opacity: 0;
