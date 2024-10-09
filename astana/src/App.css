@@ -549,3 +549,34 @@
 	justify-content: center;
 	padding-top: 3%;
 }
+
+.para {
+	position: absolute;
+	top: 21%;
+	left: 3.12%;
+	animation: animate 1.5s ease-in-out;
+	opacity: 0;
+	font-weight: 1000;
+	font-size: 4vw;
+}
+/* .paraOne {
+	top: 12%;
+	left: 42%;
+	opacity: 1;
+	animation: animate 7s linear infinite;
+	color: #333;
+} */
+
+@keyframes animate {
+	0% {
+		/* transform: scale(0.5) translate(0) rotate(0); */
+		transform: scale(250);
+		color: #535353;
+		opacity: 1;
+	}
+	100% {
+		/* transform: scale(2) translate(300px) rotate(0deg); */
+		transform: scale(1);
+		opacity: 0;
+	}
+}

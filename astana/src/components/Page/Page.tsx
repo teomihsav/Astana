@@ -48,8 +48,8 @@ const Page = () => {
     {
       key: '3',
       id: 'Task Drag',
-      title: 'Task Drag Organizer ',
-      text: 'Task drag organizer. For store app state used Redux. For drag and drop is used DND library. Many custom hooks are in play.',
+      title: t('TaskDrag.title'),
+      text: t('TaskDrag.desc'),
       link: 'https://www.dnd.ben.bg',
       image: Dnd,
       width: 450,
@@ -61,8 +61,8 @@ const Page = () => {
     {
       key: '4',
       id: 'Fast Track',
-      title: 'Clients rented cars pick up shown on screen',
-      text: 'Automation web app for showing clients their ready for taken hired vehicles. The web app is created from scratch with Vite, React. On the airport company counter TV are displayed names of clients which vehicles are ready for taking. The web app generates pages end rows dynamically depending how many clients vehicles are ready in the current hour, TV resolution is changed or zoom in the browser is changed and after the last “n” pages sticks a map page at the end.',
+      title: t('FastTrack.title'),
+      text: t('FastTrack.desc'),
       link: 'https://checkin.ben.bg/?app=signage',
       image: Signage,
       width: 350,
@@ -168,6 +168,13 @@ const Page = () => {
 
   return <>
     <TextAbove />
+
+    <div className='para'>
+      Front-End Developer
+    </div>
+    {/* <div className='paraOne'>
+      TEXT One
+    </div> */}
 
     {cardsData.map(el => <Card  {...el} />)}
 
