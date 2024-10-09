@@ -8,7 +8,9 @@ export type propTypeMenu = {
 }
 const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   const winHeight = useRef(window.innerHeight)
-  const ref = useRef(null);
+
+
+  // console.log('Lang:', state.lang)
   // const [currentScroll, currentScrollSet] = useState<number>(() => window.scrollY)
   // const [scrollEl, scrollElSet] = useState<number>(0)
   // const [elementId, elementIdSet] = useState<string>()
@@ -19,8 +21,9 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   //   scrollElSet(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2) + 70)
   //   elementIdSet(element?.id)
   // }, [window.scrollY, elementId, scrollEl])
+  // console.log('Test:', state.test)
 
-  return <div ref={ref}>
+  return <div>
     <span
       className='menu'
       onClick={() => clickMenu(el.el)}
@@ -37,9 +40,13 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
             scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2), 900)
           }}
         >
-          {el.el === 'Logo' ? el.id : window.innerWidth < 900 ?
-            <div style={{ borderRadius: '50%', width: '10px', height: '10px', backgroundColor: '#5dd39e', display: 'inline-block', }}></div>
-            : el.desc}
+          {
+            el.el === 'Logo' ? el.id : window.innerWidth < 900
+              ?
+              <div style={{ borderRadius: '50%', width: '10px', height: '10px', backgroundColor: '#5dd39e', display: 'inline-block', }}></div>
+              :
+              <span className={'fadeIn'}>{el.desc}</span>
+          }
         </span>
 
       </span>
@@ -47,4 +54,4 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   </div>
 }
 
-export default DisplayMenu
+export default React.memo(DisplayMenu)

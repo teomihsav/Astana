@@ -1,18 +1,21 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
+import i18next from 'i18next'
+import { useState, useEffect } from 'react'
 import link from '../../assets/svg/link.svg'
 import { CardProps } from '../../types/types'
+import { state } from '../../helpers/cardsData'
+// import { useTranslation } from 'react-i18next'
 
 
 const Card = (props: CardProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const [scrollActive, scrollActiveSet] = useState<number>(0)
-  // const [elem, elemSet] = useState<number>(0)
-  // const [bol, bolSet] = useState<number>(0)
+  // const { i18n } = useTranslation()
 
-  // const winHeight = useRef(window.innerHeight)
+  const [changeLango, changeLangoSet] = useState<boolean>()
   useEffect(() => {
-
-  }, [window.innerWidth < 1000])
+    changeLangoSet(!changeLango)
+    // i18next.language === 'en' ? changeLangoSet(true) : changeLangoSet(false)
+  }, [i18next.language])
+  console.log('changeLango', changeLango, i18next.language, state.test)
 
   return <>
 
@@ -20,16 +23,18 @@ const Card = (props: CardProps) => {
       {
         props.title === 'Logo' ? <div></div> : <div className={props.empty ? '' : 'card'} id={props.class}>
 
+          <span className={state.test ? 'fadeIn' : 'fadeOut'}>
+            <div className='textContainer'>
+              <div className='textCard '>
+                {props.title}
+              </div>
 
-          <div className='textContainer'>
-            <div className='textCard'>
-              {props.title}
+              <div className='textDesc '>
+                {props.text}
+              </div>
             </div>
+          </span>
 
-            <div className='textDesc'>
-              {props.text}
-            </div>
-          </div>
           <div style={{ position: 'relative', }}>
             {
               typeof props.image === 'object'

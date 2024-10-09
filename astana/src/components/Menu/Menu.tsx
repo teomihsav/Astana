@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
 
 const Menu = () => {
-  const { t } = useTranslation()
+  const { t, } = useTranslation()
 
   const menu = [
     { desc: 'Logo', el: 'Logo', id: <Logo /> },
-    { desc: t("CheckinCarRental"), el: 'Checkin Car Rental', },
+    { desc: t("Checkin.Checkin"), el: 'Checkin Car Rental', },
     { desc: t('TaskDrag'), el: 'Task Drag', },
     { desc: t('FastTrack'), el: 'Fast Track' },
     { desc: t('Damages'), el: 'Damages' },

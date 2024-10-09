@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { languages } from "../../../helpers/cardsData"
+import { languages, state } from "../../../helpers/cardsData"
 import { useTranslation } from "react-i18next"
 const LangDropDown = () => {
   const { i18n } = useTranslation()
@@ -11,6 +11,7 @@ const LangDropDown = () => {
 
   const changeLango = (lang: string) => {
     i18n.changeLanguage(lang)
+    state.test = !state.test
   }
   const toolTip = (lang: string) => {
     toolSet(langMatch[lang as keyof typeof langMatch])

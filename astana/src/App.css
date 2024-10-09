@@ -479,6 +479,35 @@
 	color: rgb(119, 119, 119);
 	transition: opacity 0.5s ease-in;
 }
+/* ///////////// */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate();
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate();
+	}
+}
+.fadeIn {
+	animation: fadeIn 1s ease-in-out;
+}
+.fadeOut {
+	animation: fadeOut 1s ease-in-out;
+}
 .logo {
 	/* height: 2.8vw;
 	width: 3.8vw; */
