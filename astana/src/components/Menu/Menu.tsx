@@ -12,9 +12,9 @@ const Menu = () => {
     { desc: t("Checkin.Checkin"), el: 'Checkin Car Rental', },
     { desc: t('TaskDrag.TaskDrag'), el: 'Task Drag', },
     { desc: t('FastTrack.FastTrack'), el: 'Fast Track' },
-    { desc: t('Damages'), el: 'Damages' },
-    { desc: t('LogTime'), el: 'Log Time' },
-    { desc: t('Contact'), el: 'Contact' },
+    { desc: t('Damages.Damages'), el: 'Damages' },
+    { desc: t('LogTime.LogTime'), el: 'Log Time' },
+    { desc: t('Contact.Contact'), el: 'Contact' },
     // { desc: 'Lang', el: <LangDropDown /> },
   ]
 

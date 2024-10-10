@@ -74,8 +74,8 @@ const Page = () => {
     {
       key: '5',
       id: 'Damages',
-      title: 'Damages',
-      text: 'Automation web app for describing vehicle damages before check out and after check in. The app is created from scratch with Vite, React and context for app state store',
+      title: t('Damages.title'),
+      text: t('Damages.desc'),
       link: 'https://damages.ben.bg',
       image: Damages,
       width: 450,
@@ -87,8 +87,8 @@ const Page = () => {
     {
       key: '6',
       id: 'Log Time',
-      title: 'Log Time',
-      text: 'App for logging time on a working projects.',
+      title: t('LogTime.title'),
+      text: t('LogTime.desc'),
       link: '',
       image: Logger,
       width: 450,

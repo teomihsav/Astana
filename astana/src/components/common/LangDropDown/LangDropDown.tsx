@@ -18,7 +18,7 @@ const LangDropDown = () => {
   }
 
   return <>
-    <div className='langBox' >
+    <div className='langBox'>
       {
         Object.entries(languages).map((el) =>
           <img

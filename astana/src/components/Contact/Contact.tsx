@@ -20,7 +20,9 @@ const Contact = () => {
   return <div className={window.innerWidth > 1000 ? 'email-text' : 'email-text'}>
     <span className='textPopUp'>
       {/* {window.innerWidth > 1000 ? text : ''} */}
-      {text}
+      <div className='textPopUpCont'>
+        {text}
+      </div>
     </span>
 
     <span

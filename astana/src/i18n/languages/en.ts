@@ -13,7 +13,7 @@ export const en = {
   },
 
   "TaskDrag": {
-    "TaskDrag": "Task drag and drop",
+    "TaskDrag": "Task drag & drop",
     "title": "Task drag and drop",
     "desc": "Task drag organizer. For store app state used Redux. For drag and drop is used DND library. Many custom hooks are in play.",
   },
@@ -24,9 +24,21 @@ export const en = {
     "desc": "Web application to display customers and their finished rental cars. The company's counter at the airport displays the names of customers whose vehicles are ready for pickup. The web app dynamically generates rows of pages depending on how many customer vehicles are ready for pickup at the current hour. If the TV resolution changes or the browser zoom changes 'n' number of pages and rows are generated and finally a page with a map of how to get to the vehicle is pasted.",
   },
 
-  "Damages": "Damages",
-  "LogTime": "Log Time",
-  "Contact": "Contact",
+  "Damages": {
+    "Damages": "Damages",
+    "title": "Describing damaged vehicles",
+    "desc": "Automation web app for describing vehicle damages before check out and after check in. The app is created from scratch with Vite, React and context for app state store",
+  },
+
+  "LogTime": {
+    "LogTime": "Log time",
+    "title": "Log of worked time",
+    "desc": "App for logging time on a worked projects.",
+  },
+
+  "Contact": {
+    "Contact": "Contact",
+  },
 
 
 }

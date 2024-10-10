@@ -54,4 +54,4 @@ const DisplayMenu = ({ el, clickMenu, colorMenu }: propTypeMenu) => {
   </div>
 }
 
-export default React.memo(DisplayMenu)
+export default DisplayMenu
