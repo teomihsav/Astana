@@ -23,7 +23,7 @@ const Menu = () => {
   const [, widthInnSet] = useState<string>('')
 
   const clickMenu = (id: string) => {
-    console.log(id)
+    // console.log(id)
     colorMenuSet(id)
   }
 

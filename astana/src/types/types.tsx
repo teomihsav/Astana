@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 export interface CardProps {
   id: string
   title: string,
-  text: string | undefined,
+  text: string,
   image: string | ReactNode,
   width?: string | number | undefined
   class: string
@@ -11,4 +11,6 @@ export interface CardProps {
   stand: boolean
   empty: boolean
   line?: ReactNode,
+  buildTitle?: string
+  build?: string
 }

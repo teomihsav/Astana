@@ -9,6 +9,7 @@ import Signage from '../../assets/signage.png';
 import Damages from '../../assets/damages.png'
 import Logger from '../../assets/logger.png'
 import { useTranslation } from 'react-i18next';
+import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
   // function translate(key: never | string) {
@@ -37,6 +38,8 @@ const Page = () => {
       id: 'Checkin Car Rental',
       title: t('Checkin.title'),
       text: t('Checkin.desc'),
+      buildTitle: t('Checkin.buildTitle'),
+      build: t('Checkin.build'),
       link: 'https://checkin.ben.bg/?app=checkin',
       image: Checkin,
       width: 350,
@@ -167,7 +170,10 @@ const Page = () => {
   }, [window.scrollY])
 
   return <>
+
     <TextAbove />
+
+    <VoiceToText />
 
     <div className='para'>
       Front-End Developer

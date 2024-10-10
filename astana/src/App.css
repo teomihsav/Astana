@@ -211,6 +211,8 @@
 	background: rgb(41, 41, 41);
 	width: fit-content;
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+	padding-bottom: 1rem;
+	padding-right: 1rem;
 }
 
 #animated-text-strip-reversedOne {
@@ -301,20 +303,17 @@
 .textCard {
 	font-size: 1.5rem;
 	text-align: right;
-	padding-top: 1%;
-	/* padding-left: 1%; */
+	padding-top: 2.5%;
 	padding-right: 1%;
 	opacity: 1;
+	color: #5dd39e;
 }
 
 .textCard:hover + .textDesc {
-	/* transform: text translateY(450px); */
 	transition: opacity 0.5s ease-in;
-
 	opacity: 1;
 }
 .textDesc {
-	position: relative;
 	font-size: 1rem;
 	padding-top: 5%;
 	padding-bottom: 2%;
@@ -323,7 +322,6 @@
 	opacity: 0.4;
 	transition: opacity 0.5s ease-in;
 
-	transition: transform 500ms;
 	width: fit-content;
 }
 .textDesc:hover {
@@ -338,7 +336,71 @@
 	transition: opacity 0.5s ease-in;
 	color: rgb(202, 202, 202);
 }
+.pprCont {
+	/* display: flex; */
+}
+.imgPPR {
+	width: 2rem;
+	cursor: pointer;
+	opacity: 0.5;
+	color: #f02e14;
+}
+.imgPPR:hover + .textDesc {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
+.imgPPR:hover {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+}
+.buildTitle {
+	color: #2d7cd6;
+	font-size: 1rem;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-align: right;
+	padding-left: 2%;
+	/* opacity: 0.4; */
+	transition: opacity 0.5s ease-in;
+	width: fit-content;
+}
+.build {
+	display: flex;
+	flex-direction: row;
+	font-size: 1rem;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	text-align: right;
+	padding-left: 2%;
+	opacity: 0.4;
+	transition: opacity 0.5s ease-in;
+	width: fit-content;
+	flex-wrap: wrap;
+}
+.buildEl {
+	padding: 0.5rem;
+	margin: 0.5rem;
+	border-radius: 4px;
+	background-color: #535353;
+}
+.build:hover {
+	font-size: 1rem;
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+	color: rgb(202, 202, 202);
+}
 
+.dummyAppCont {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+}
+.dummyApp {
+	color: #ffd94f;
+	font-size: 13px;
+	font-weight: 800;
+	padding-bottom: 5px;
+}
 .imgCard {
 	border-radius: 12px;
 	border: 4px solid #5dd39e;
@@ -359,7 +421,7 @@
 	opacity: 0.5;
 	transition: opacity 0.5s ease-in;
 	right: 3%;
-	top: 3%;
+	top: -0.5%;
 }
 .svgLink:hover {
 	position: absolute;
@@ -427,13 +489,6 @@
 	display: block;
 	justify-content: center;
 }
-/* .langBtn {
-	position: absolute;
-	top: 2rem;
-	cursor: pointer;
-	opacity: 0.5;
-	transition: opacity 0.5s ease-in;
-} */
 .langBtn {
 	position: fixed;
 	top: 1.7rem;

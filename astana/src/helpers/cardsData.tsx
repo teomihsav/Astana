@@ -12,7 +12,8 @@ import i18next from 'i18next'
 
 export const state = {
   lang: i18next.language,
-  test: false
+  test: false,
+  transcript: ''
 }
 
 export const languages = {
