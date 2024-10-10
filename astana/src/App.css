@@ -411,6 +411,12 @@
 	right: 100%;
 	top: 30%;
 }
+.textPopUpCont {
+	position: absolute;
+	top: 0rem;
+	left: -1.5rem;
+	width: 100px;
+}
 .textPopUp {
 	position: absolute;
 	font-size: 0.8rem;
