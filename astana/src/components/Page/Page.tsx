@@ -9,7 +9,7 @@ import Signage from '../../assets/signage.png';
 import Damages from '../../assets/damages.png'
 import Logger from '../../assets/logger.png'
 import { useTranslation } from 'react-i18next';
-import VoiceToText from '../common/TextToVoice/VoiceToText';
+// import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
   // function translate(key: never | string) {
@@ -22,24 +22,26 @@ const Page = () => {
     },
     {
       key: '1',
-      id: '',
-      title: '',
-      text: '',
+      id: 'Portfolio',
+      title: t('Portfolio.title'),
+      text: t('Portfolio.desc'),
+      buildTitle: t('Portfolio.buildTitle'),
+      build: t('Portfolio.build'),
       link: '',
-      image: '',
+      image: false,
       width: '',
-      class: '',
+      class: 'animated-text-stripOneCardTitle',
       stand: false,
-      empty: true,
+      empty: false,
       line: <Line id={'Zero'} />
     },
     {
       key: '2',
-      id: 'Checkin Car Rental',
-      title: t('Checkin.title'),
-      text: t('Checkin.desc'),
-      buildTitle: t('Checkin.buildTitle'),
-      build: t('Checkin.build'),
+      id: 'Check Car Rental',
+      title: t('Check.title'),
+      text: t('Check.desc'),
+      buildTitle: t('Check.buildTitle'),
+      build: t('Check.build'),
       link: 'https://checkin.ben.bg/?app=checkin',
       image: Checkin,
       width: 350,
@@ -50,9 +52,11 @@ const Page = () => {
     },
     {
       key: '3',
-      id: 'Task Drag',
+      id: 'Task drag',
       title: t('TaskDrag.title'),
       text: t('TaskDrag.desc'),
+      buildTitle: t('TaskDrag.buildTitle'),
+      build: t('TaskDrag.build'),
       link: 'https://www.dnd.ben.bg',
       image: Dnd,
       width: 450,
@@ -66,6 +70,8 @@ const Page = () => {
       id: 'Fast Track',
       title: t('FastTrack.title'),
       text: t('FastTrack.desc'),
+      buildTitle: t('FastTrack.buildTitle'),
+      build: t('FastTrack.build'),
       link: 'https://checkin.ben.bg/?app=signage',
       image: Signage,
       width: 350,
@@ -79,6 +85,8 @@ const Page = () => {
       id: 'Damages',
       title: t('Damages.title'),
       text: t('Damages.desc'),
+      buildTitle: t('Damages.buildTitle'),
+      build: t('Damages.build'),
       link: 'https://damages.ben.bg',
       image: Damages,
       width: 450,
@@ -89,9 +97,11 @@ const Page = () => {
     },
     {
       key: '6',
-      id: 'Log Time',
+      id: 'Log time',
       title: t('LogTime.title'),
       text: t('LogTime.desc'),
+      buildTitle: t('LogTime.buildTitle'),
+      build: t('LogTime.build'),
       link: '',
       image: Logger,
       width: 450,
@@ -110,7 +120,8 @@ const Page = () => {
       width: '',
       class: '',
       stand: false,
-      empty: false,
+      empty: true,
+      // line: <Line id={'Five'} />
     },
     {
       key: '8',
@@ -173,7 +184,7 @@ const Page = () => {
 
     <TextAbove />
 
-    <VoiceToText />
+    {/* <VoiceToText /> */}
 
     <div className='para'>
       Front-End Developer

@@ -337,7 +337,13 @@
 	color: rgb(202, 202, 202);
 }
 .pprCont {
-	/* display: flex; */
+	align-self: center;
+	border-radius: 4px;
+	margin: 10px 0 0 0;
+	padding: 5px;
+	padding-bottom: 0px;
+	background-color: #313131;
+	width: fit-content;
 }
 .imgPPR {
 	width: 2rem;
@@ -354,7 +360,7 @@
 	transition: opacity 0.5s ease-in;
 }
 .buildTitle {
-	color: #2d7cd6;
+	color: #e4e3e3;
 	font-size: 1rem;
 	padding-top: 2%;
 	padding-bottom: 2%;
@@ -396,7 +402,7 @@
 	top: 1rem;
 }
 .dummyApp {
-	color: #ffd94f;
+	color: #e4e3e3;
 	font-size: 13px;
 	font-weight: 800;
 	padding-bottom: 5px;
@@ -435,7 +441,8 @@
 	position: relative;
 	color: white;
 	font-weight: 700;
-	margin: 25px;
+	/* margin: 25px; */
+	margin: 20% 0 100% 0;
 }
 .email {
 	position: relative;

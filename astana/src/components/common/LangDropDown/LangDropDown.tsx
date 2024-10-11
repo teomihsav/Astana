@@ -1,17 +1,17 @@
-import { useState } from "react"
-import { languages, state } from "../../../helpers/cardsData"
+import { useEffect, useRef, useState } from "react"
+import { langMatch, languages, state, useStore } from "../../../helpers/cardsData"
 import { useTranslation } from "react-i18next"
+import { scrollToSmoothly } from "../../../helpers/helpers"
 const LangDropDown = () => {
   const { i18n } = useTranslation()
   const [tool, toolSet] = useState<string>('')
-  const langMatch = {
-    en: 'English',
-    bg: 'Български',
-  }
+  const winHeight = useRef(window.innerHeight)
 
   const changeLango = (lang: string) => {
     i18n.changeLanguage(lang)
     state.test = !state.test
+    scrollToSmoothly(useStore.getState().scroll, 900)
+    console.log('Lango Scroll: ', useStore.getState().scroll)
   }
   const toolTip = (lang: string) => {
     toolSet(langMatch[lang as keyof typeof langMatch])

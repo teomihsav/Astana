@@ -9,11 +9,11 @@ const Menu = () => {
 
   const menu = [
     { desc: 'Logo', el: 'Logo', id: <Logo /> },
-    { desc: t("Checkin.Checkin"), el: 'Checkin Car Rental', },
-    { desc: t('TaskDrag.TaskDrag'), el: 'Task Drag', },
+    { desc: t("Check.Check"), el: 'Check Car Rental', },
+    { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
     { desc: t('FastTrack.FastTrack'), el: 'Fast Track' },
     { desc: t('Damages.Damages'), el: 'Damages' },
-    { desc: t('LogTime.LogTime'), el: 'Log Time' },
+    { desc: t('LogTime.LogTime'), el: 'Log time' },
     { desc: t('Contact.Contact'), el: 'Contact' },
     // { desc: 'Lang', el: <LangDropDown /> },
   ]

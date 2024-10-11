@@ -17,7 +17,7 @@ const Card = (props: CardProps) => {
   }, [i18next.language])
   // console.log('changeLango', changeLango, i18next.language, state.test)
   const build = props.build && props.build.split(', ')
-  console.log(build)
+
   return <>
 
     <div id={props.id} className='animated'>
@@ -33,7 +33,7 @@ const Card = (props: CardProps) => {
               <div className='textDesc '>
                 {props.text}
               </div>
-              <TextToVoice text={props.text} />
+              {props.empty ? <></> : <TextToVoice text={props.text} />}
               <div className='buildTitle '>
                 {props.buildTitle}
               </div>
@@ -54,11 +54,13 @@ const Card = (props: CardProps) => {
                 <a href={props.link} >
                   {
                     window.innerWidth < 1000 ? <></> :
-                      props.empty ? <></> : <div>
-                        <div className='dummyApp'>Browse the dummy app</div>
+                      props.empty || !props.image
+                        ? <></> :
+                        <div>
+                          <div className='dummyApp'>Browse the dummy app</div>
 
-                        <img className='imgCard' src={props.image as string} width={props.width} />
-                      </div>
+                          <img className='imgCard' src={props.image as string} width={props.width} />
+                        </div>
                   }
                   {
                     props.empty ? <></> :

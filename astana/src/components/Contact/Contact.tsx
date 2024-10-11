@@ -42,7 +42,6 @@ const Contact = () => {
         // : 
         <div className='emailText'>contact@ben.bg</div>
       }
-      {/* <div style={{ paddingLeft: '10px', color: 'red' }}>{count}</div> */}
     </span>
   </div>
 
