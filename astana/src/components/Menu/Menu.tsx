@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
 import { useTranslation } from 'react-i18next'
@@ -12,7 +12,7 @@ const Menu = () => {
     { desc: 'Logo', el: 'Logo', id: <Logo /> },
     { desc: t("Check.Check"), el: 'Check car rental', },
     { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
-    { desc: t('FastTrack.FastTrack'), el: 'Fast track' },
+    { desc: t('FastTrack.FastTrack'), el: 'Fast Track' },
     { desc: t('Damages.Damages'), el: 'Damages' },
     { desc: t('LogTime.LogTime'), el: 'Log time' },
     { desc: t('Contact.Contact'), el: 'Contact' },
@@ -44,14 +44,24 @@ const Menu = () => {
   return <>
 
     {
-      <div className='navbar ' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-        {
-          menu.map(el =>
-            <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <DisplayMenu el={el} clickMenu={clickMenu} textMenu={textMenu} />
-            </span>
-          )
-        }
+      <div className='navbar '>
+
+        <div className='shadowLeft'></div>
+        <div className='navbarInCover' >
+
+          <div className='navbarIn '>
+
+            {
+              menu.map(el =>
+                <span key={el.desc}>
+                  <DisplayMenu el={el} clickMenu={clickMenu} textMenu={textMenu} />
+                </span>
+              )
+            }
+
+          </div>
+        </div>
+        <div className='shadowRight'></div>
 
       </div>
     }

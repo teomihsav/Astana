@@ -1,4 +1,4 @@
-import React, { useRef, } from 'react'
+import React, { useEffect, useRef, useState, } from 'react'
 import { scrollToSmoothly } from '../../helpers/helpers'
 import { useStore } from '../../helpers/cardsData'
 
@@ -11,18 +11,27 @@ export type propTypeMenu = {
 const DisplayMenu = ({ el, clickMenu, textMenu }: propTypeMenu) => {
   const text = useStore((state) => state.transcript)
   const winHeight = useRef(window.innerHeight)
+  const [, scrollActiveSet] = useState<number>(0)
 
   // useEffect(() => {
   // }, [state.transcript])
   // console.log('Test:', state.test)
 
-  return <div>
+  useEffect(() => {
+    window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
+    document.querySelector<HTMLElement>('.navbarIn')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+    // document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(-window.scrollY)}px)`;
+    // document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+    // document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(-window.scrollY)}px)`;
+    // document.querySelector<HTMLElement>('#animated-text-strip-reversedTwo')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+  }, [window.scrollY])
+
+  return <div >
     <span
-      className='menu'
+      className='menu '
       onClick={() => clickMenu(el.el)}
       onChange={() => clickMenu(text)}
     >
-
       <span style={{ paddingRight: '10px' }}>
         <span
           className={textMenu === el.el ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}

@@ -76,6 +76,7 @@
 	margin-right: 1vw;
 	color: rgb(177, 177, 177);
 }
+
 .underline {
 	color: #5dd39e;
 	text-decoration: none;
@@ -103,7 +104,9 @@
 }
 
 .navbar {
-	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
 	background-color: #333;
 	position: fixed;
@@ -113,6 +116,38 @@
 	padding: 10px;
 	z-index: 1;
 	box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
+}
+.shadowLeft {
+	/* position: absolute; */
+	left: 31.5%;
+	/* filter: drop-shadow(0 0 1em #686868); */
+	border-right: 2px solid #333;
+	width: 3px;
+	height: 60px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+	clip-path: inset(0 -15px 0 0);
+}
+.shadowRight {
+	/* position: absolute; */
+	left: 71.7%;
+	/* filter: drop-shadow(0 0 1em #686868); */
+	border-left: 2px solid #333;
+	width: 3px;
+	height: 60px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+	clip-path: inset(0 0 0 -15px);
+}
+.navbarInCover {
+	clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 80%);
+}
+.navbarIn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	height: 50px;
+	overflow: hidden;
+	z-index: 10000;
 }
 
 @keyframes marquee {
