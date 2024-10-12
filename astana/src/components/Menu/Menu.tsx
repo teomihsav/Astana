@@ -56,7 +56,7 @@ const Menu = () => {
       </div>
     }
     <LangButton />
-    <VoiceToText />
+    {(window.innerWidth > 1050 || window.innerWidth < 900) && <VoiceToText />}
   </>
 }
 

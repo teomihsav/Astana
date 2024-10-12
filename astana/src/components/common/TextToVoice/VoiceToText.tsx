@@ -10,7 +10,7 @@ import { scrollToSmoothly } from "../../../helpers/helpers";
 
 const VoiceToText = () => {
   const { startListening, stopListening, transcript, reset } = useVoiceToText();
-  const [tool, toolSet] = useState<string>('Test Test Test')
+  const [tool, toolSet] = useState<string>('')
   const [onOff, onOffSet] = useState<boolean>()
   // const { setTranscript } = useStore()
   const winHeight = useRef(window.innerHeight)
@@ -20,9 +20,14 @@ const VoiceToText = () => {
     return () => {
       toolSet(transcript.slice(0, -1).trim())
       setTimeout(() => {
-        // setTranscript(transcript.slice(0, -1).trim())
+        transcript.slice(0, -1).trim() === 'Stop Mic' && stopListening(), onOffSet(false)
         const element = document.getElementById(transcript.slice(0, -1).trim())
-        scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2), 900)
+
+        transcript.slice(0, -1).trim() === 'Stop Mic'
+          ?
+          scrollToSmoothly(0, 900)
+          :
+          scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2), 900)
       }, 100)
     }
   }, [transcript])

@@ -23,7 +23,7 @@ export const en = {
   },
 
   "TaskDrag": {
-    "TaskDrag": "Task drag",
+    "TaskDrag": "Task Drag",
     "title": "Task drag and drop",
     "desc": "With this app you can create delete edit columns of tasks inside each column you can create delete edit tasks and all that can be dragged all together and separately. For store app state used Redux. For drag and drop is used DND library. Custom hooks are in play.",
     "buildTitle": "Build Technologies:",
@@ -47,7 +47,7 @@ export const en = {
   },
 
   "LogTime": {
-    "LogTime": "Log time",
+    "LogTime": "Log Time",
     "title": "Log of worked time",
     "desc": "App for logging working hours on a working projects. You can change from weekly to monthly view edit comments and add working hours until they are locked.",
     "buildTitle": "Build Technologies:",
