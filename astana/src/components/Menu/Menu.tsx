@@ -1,9 +1,11 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
 import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
 import VoiceToText from '../common/TextToVoice/VoiceToText'
+import LeftMenuMove from '../common/LeftMenuMove/LeftMenuMove'
+import RightMenuMove from '../common/RightMenuMove/RightMenuMove'
 
 const Menu = () => {
   const { t, } = useTranslation()
@@ -42,14 +44,14 @@ const Menu = () => {
   }, [window.innerWidth])
 
   return <>
-
     {
       <div className='navbar '>
 
+        <LeftMenuMove />
         <div className='shadowLeft'></div>
         <div className='navbarInCover' >
 
-          <div className='navbarIn '>
+          <div id='animatedMenu' className='navbarIn '>
 
             {
               menu.map(el =>
@@ -62,6 +64,7 @@ const Menu = () => {
           </div>
         </div>
         <div className='shadowRight'></div>
+        <RightMenuMove />
 
       </div>
     }

@@ -16,16 +16,20 @@ type State = {
   transcript: string,
   scroll: number,
   element: string,
+  positionPx: number,
 }
 type Action = {
   setTranscript: (x: string) => void
+  setMove: (x: number) => void
 }
 
 export const useStore = create<State & Action>((set) => ({
   transcript: '',
   scroll: 0,
   element: '',
+  positionPx: 0,
   setTranscript: transcript => set(() => ({ transcript })),
+  setMove: positionPx => set(() => ({ positionPx })),
 }))
 
 // ----------------------------------------

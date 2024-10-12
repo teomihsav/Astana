@@ -118,9 +118,7 @@
 	box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
 }
 .shadowLeft {
-	/* position: absolute; */
 	left: 31.5%;
-	/* filter: drop-shadow(0 0 1em #686868); */
 	border-right: 2px solid #333;
 	width: 3px;
 	height: 60px;
@@ -128,9 +126,7 @@
 	clip-path: inset(0 -15px 0 0);
 }
 .shadowRight {
-	/* position: absolute; */
 	left: 71.7%;
-	/* filter: drop-shadow(0 0 1em #686868); */
 	border-left: 2px solid #333;
 	width: 3px;
 	height: 60px;
@@ -149,7 +145,32 @@
 	overflow: hidden;
 	z-index: 10000;
 }
-
+.leftMenuMove {
+	position: sticky;
+	top: 1.7rem;
+	width: 30px;
+	height: 41px;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	padding-right: 3px;
+}
+.rightMenuMove {
+	position: sticky;
+	top: 1.4rem;
+	width: 30px;
+	height: 41px;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	padding-left: 10px;
+}
+.leftMenuMove:hover {
+	opacity: 1;
+}
+.rightMenuMove:hover {
+	opacity: 1;
+}
 @keyframes marquee {
 	0% {
 		transform: translate(-100%, 0);
@@ -186,6 +207,7 @@
 		/* 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
 	}
 }
+
 #animated-text-strip {
 	display: flex;
 	flex-flow: row nowrap;
@@ -198,8 +220,8 @@
 	background: #292929;
 	padding: 3px;
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
-	/* width: fit-content; */
 	animation: glow 2s ease-in;
+	/* width: fit-content; */
 }
 #animated-text-strip-reversed {
 	display: flex;
@@ -214,6 +236,15 @@
 	width: fit-content;
 }
 
+#animatedMenu {
+	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+	animation: glow 2s ease-in;
+}
+#animatedMenu .marquee {
+	white-space: nowrap;
+	animation: marquee 5s ease-in infinite;
+	max-width: none;
+}
 #animated-text-strip .marquee {
 	white-space: nowrap;
 	animation: marquee 5s ease-in infinite;
@@ -307,14 +338,12 @@
 	padding: 1rem 0;
 } */
 .marquee {
-	font-family: "Open Sans", sans-serif;
 	font-size: 2rem;
 	font-weight: 900;
 	text-transform: uppercase;
 	color: white;
 }
 .marqueeReverse {
-	font-family: "Open Sans", sans-serif;
 	font-size: 2rem;
 	font-weight: 900;
 	text-transform: uppercase;
