@@ -336,21 +336,76 @@
 	transition: opacity 0.5s ease-in;
 	color: rgb(202, 202, 202);
 }
+.mic {
+	position: fixed;
+	top: 1.8rem;
+	left: 0.5rem;
+	opacity: 0.5;
+}
+.micOff {
+	position: fixed;
+	top: 2rem;
+	left: 0.2rem;
+	opacity: 0.5;
+}
+.voiceToTextCont {
+	/* align-self: flex-start;
+	margin: 10px 0 0 0;
+	padding-bottom: 0px;
+	width: fit-content; */
+
+	position: fixed;
+	top: 1.3rem;
+	left: 2.4rem;
+	border-radius: 4px;
+	padding: 5px 5px 0px 10px;
+	background-color: #292929;
+	z-index: 1;
+	cursor: pointer;
+}
+.textVoice {
+	vertical-align: text-top;
+	padding: 20px 10px 0px 10px;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
 .pprCont {
 	align-self: center;
 	border-radius: 4px;
-	margin: 10px 0 0 0;
+	margin: 15px 0 0 0;
 	padding: 5px;
-	padding-bottom: 0px;
+	padding-bottom: -100px;
 	background-color: #313131;
 	width: fit-content;
+}
+.imgPower {
+	width: 1.4rem;
+	cursor: pointer;
+	opacity: 0.5;
+	padding-bottom: 0.2rem;
+	padding-right: 0.15rem;
+}
+.imgStop {
+	left: 1rem;
+	width: 1.4rem;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.imgPower:hover {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+}
+.imgStop:hover {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
 }
 .imgPPR {
 	width: 2rem;
 	cursor: pointer;
 	opacity: 0.5;
-	color: #f02e14;
 }
+
 .imgPPR:hover + .textDesc {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;

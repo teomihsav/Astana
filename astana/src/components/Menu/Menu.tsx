@@ -3,28 +3,29 @@ import DisplayMenu from './DisplayMenu'
 import Logo from '../Logo/LogoBen'
 import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
+import VoiceToText from '../common/TextToVoice/VoiceToText'
 
 const Menu = () => {
   const { t, } = useTranslation()
 
   const menu = [
     { desc: 'Logo', el: 'Logo', id: <Logo /> },
-    { desc: t("Check.Check"), el: 'Check Car Rental', },
+    { desc: t("Check.Check"), el: 'Check car rental', },
     { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
-    { desc: t('FastTrack.FastTrack'), el: 'Fast Track' },
+    { desc: t('FastTrack.FastTrack'), el: 'Fast track' },
     { desc: t('Damages.Damages'), el: 'Damages' },
     { desc: t('LogTime.LogTime'), el: 'Log time' },
     { desc: t('Contact.Contact'), el: 'Contact' },
     // { desc: 'Lang', el: <LangDropDown /> },
   ]
 
-  const [colorMenu, colorMenuSet] = useState<string>('')
+  const [textMenu, textMenuSet] = useState<string>('')
   // const [count, countSet] = useState<number>(0)
   const [, widthInnSet] = useState<string>('')
 
   const clickMenu = (id: string) => {
     // console.log(id)
-    colorMenuSet(id)
+    textMenuSet(id)
   }
 
   // useEffect(() => {
@@ -38,9 +39,6 @@ const Menu = () => {
 
   useLayoutEffect(() => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
-    // console.log('Width: ', window.innerWidth)
-    // widthInnSet(window.innerWidth.toString())
-    // window.innerWidth > 1000
   }, [window.innerWidth])
 
   return <>
@@ -50,7 +48,7 @@ const Menu = () => {
         {
           menu.map(el =>
             <span key={el.desc} style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <DisplayMenu el={el} clickMenu={clickMenu} colorMenu={colorMenu} />
+              <DisplayMenu el={el} clickMenu={clickMenu} textMenu={textMenu} />
             </span>
           )
         }
@@ -58,6 +56,7 @@ const Menu = () => {
       </div>
     }
     <LangButton />
+    <VoiceToText />
   </>
 }
 

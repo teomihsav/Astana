@@ -37,7 +37,7 @@ const Page = () => {
     },
     {
       key: '2',
-      id: 'Check Car Rental',
+      id: 'Check car rental',
       title: t('Check.title'),
       text: t('Check.desc'),
       buildTitle: t('Check.buildTitle'),
@@ -183,8 +183,6 @@ const Page = () => {
   return <>
 
     <TextAbove />
-
-    {/* <VoiceToText /> */}
 
     <div className='para'>
       Front-End Developer

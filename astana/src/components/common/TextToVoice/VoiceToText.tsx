@@ -1,31 +1,67 @@
 import { useVoiceToText } from "react-speakup";
-import { state, useStore, } from "../../../helpers/cardsData";
-import { useEffect } from "react";
+// import { state, useStore, } from "../../../helpers/cardsData";
+import { useEffect, useRef, useState } from "react";
+import powerImg from '../../../assets/svg/power.svg'
+import stopImg from '../../../assets/svg/stop.svg'
+import mic from '../../../assets/svg/mic.svg'
+import micOff from '../../../assets/svg/micOff.svg'
+import { scrollToSmoothly } from "../../../helpers/helpers";
+// import Power from "../svg/Power";
 
 const VoiceToText = () => {
   const { startListening, stopListening, transcript, reset } = useVoiceToText();
-  const { setTranscript } = useStore()
-
-  // console.log(transcript.slice(0, -1))
+  const [tool, toolSet] = useState<string>('Test Test Test')
+  const [onOff, onOffSet] = useState<boolean>()
+  // const { setTranscript } = useStore()
+  const winHeight = useRef(window.innerHeight)
 
   useEffect(() => {
     reset()
-    // state.transcript = transcript.slice(0, -1).trim()
     return () => {
+      toolSet(transcript.slice(0, -1).trim())
       setTimeout(() => {
-        setTranscript(transcript.slice(0, -1).trim())
-      }, 500)
+        // setTranscript(transcript.slice(0, -1).trim())
+        const element = document.getElementById(transcript.slice(0, -1).trim())
+        scrollToSmoothly(Number(element?.offsetTop) - (winHeight.current / 2) + Number(element?.offsetHeight as number / 2), 900)
+      }, 100)
     }
   }, [transcript])
 
-  return (
-    <div>
-      <button onClick={startListening}>Start Listening</button>
-      <button onClick={stopListening}>Stop Listening</button>
-      <button onClick={reset}>Reset Transcript</button>
-      <span>{state.transcript}</span>
+  const toolTip = (text: string) => {
+    toolSet(text)
+  }
+
+  return <>
+    <div className="voiceToTextCont">
+      {onOff ?
+        <img
+          className='mic'
+          src={mic}
+        />
+        :
+        <img
+          className='mic'
+          src={micOff}
+        />
+      }  <img
+        onMouseOver={() => toolTip('Start Voice Menu Navigation')}
+        onMouseOut={() => toolTip('')}
+        className="imgPower"
+        src={powerImg}
+        onClick={() => (startListening(), onOffSet(true))}
+      />
+      <img
+        onMouseOver={() => toolTip('Stop Mic')}
+        onMouseOut={() => toolTip('')}
+        className="imgStop"
+        src={stopImg}
+        onClick={() => (stopListening(), onOffSet(false))}
+      />
+      {/* <button onClick={reset}>Reset Transcript</button> */}
+
+      <span className="textVoice">{tool}</span>
     </div>
-  );
-};
+  </>
+}
 
 export default VoiceToText;

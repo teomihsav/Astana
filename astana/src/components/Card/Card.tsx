@@ -17,7 +17,7 @@ const Card = (props: CardProps) => {
   }, [i18next.language])
   // console.log('changeLango', changeLango, i18next.language, state.test)
   const build = props.build && props.build.split(', ')
-
+  // console.log(build)
   return <>
 
     <div id={props.id} className='animated'>
