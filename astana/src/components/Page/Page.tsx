@@ -8,6 +8,7 @@ import Dnd from '../../assets/dnd1.png';
 import Signage from '../../assets/signage.png';
 import Damages from '../../assets/damages.png'
 import Logger from '../../assets/logger.png'
+import Pap from '../../assets/pap1.png'
 import { useTranslation } from 'react-i18next';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
@@ -29,6 +30,21 @@ const Page = () => {
       build: t('Portfolio.build'),
       link: '',
       image: false,
+      width: '',
+      class: 'animated-text-stripOneCardTitle',
+      stand: false,
+      empty: false,
+      line: <Line id={'Zero'} />
+    },
+    {
+      key: '1',
+      id: 'Learning',
+      title: t('Learning.title'),
+      text: t('Learning.desc'),
+      buildTitle: t('Learning.buildTitle'),
+      build: t('Learning.build'),
+      link: '',
+      image: Pap,
       width: '',
       class: 'animated-text-stripOneCardTitle',
       stand: false,

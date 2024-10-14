@@ -1,23 +1,26 @@
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
-import Logo from '../Logo/LogoBen'
 import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
 import VoiceToText from '../common/TextToVoice/VoiceToText'
 import LeftMenuMove from '../common/LeftMenuMove/LeftMenuMove'
 import RightMenuMove from '../common/RightMenuMove/RightMenuMove'
+import LogoBen from '../Logo/LogoBen'
 
 const Menu = () => {
   const { t, } = useTranslation()
 
   const menu = [
-    { desc: 'Logo', el: 'Logo', id: <Logo /> },
+    { desc: 'Logo', el: 'Logo', id: <LogoBen /> },
+    { desc: t("Learning.Learning"), el: 'Learning', },
     { desc: t("Check.Check"), el: 'Check car rental', },
-    { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
     { desc: t('FastTrack.FastTrack'), el: 'Fast Track' },
     { desc: t('Damages.Damages'), el: 'Damages' },
+    { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
     { desc: t('LogTime.LogTime'), el: 'Log time' },
+    { desc: t('Cargo.Cargo'), el: 'Cargo' },
     { desc: t('Contact.Contact'), el: 'Contact' },
+    { desc: 'Logo', el: 'Logo', id: <LogoBen /> },
     // { desc: 'Lang', el: <LangDropDown /> },
   ]
 
@@ -39,6 +42,20 @@ const Menu = () => {
   //   )
   // }, [count === 7])
 
+  useEffect(() => {
+    const el = document.querySelector<HTMLElement>('.navbarIn')
+    el?.addEventListener('wheel', function (event: WheelEvent) {
+      event.preventDefault();
+      // console.log('Element:', el, event.wheelDelta)
+      document.querySelector<HTMLElement>('.navbarIn')!.style.transform = `translateX(${event.deltaY * 3}px)`
+
+      // console.log('mousePosition: ', event)
+      // div.style.left = (mousePosition.x + offset[0]) + 'px';
+      // div.style.top = (mousePosition.y + offset[1]) + 'px';
+    }
+    )
+  })
+
   useLayoutEffect(() => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
   }, [window.innerWidth])
@@ -46,12 +63,11 @@ const Menu = () => {
   return <>
     {
       <div className='navbar '>
-
         <LeftMenuMove />
-        <div className='shadowLeft'></div>
-        <div className='navbarInCover' >
 
-          <div id='animatedMenu' className='navbarIn '>
+        <span className='navbarInCover' >
+
+          <span id='animatedMenu' className='navbarIn '>
 
             {
               menu.map(el =>
@@ -61,15 +77,17 @@ const Menu = () => {
               )
             }
 
-          </div>
-        </div>
-        <div className='shadowRight'></div>
+          </span>
+        </span>
+
         <RightMenuMove />
 
       </div>
     }
     <LangButton />
     {(window.innerWidth > 1050 || window.innerWidth < 900) && <VoiceToText />}
+    {/* <LogoBen /> */}
+
   </>
 }
 

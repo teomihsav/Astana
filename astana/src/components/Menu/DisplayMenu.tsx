@@ -13,8 +13,9 @@ const DisplayMenu = ({ el, clickMenu, textMenu }: propTypeMenu) => {
   const winHeight = useRef(window.innerHeight)
 
   // useEffect(() => {
-  // }, [state.transcript])
-  // console.log('Test:', state.test)
+  //   document.removeEventListener('mousemove', function () { })
+  // }, [])
+
 
   return <div>
     <span
@@ -22,7 +23,7 @@ const DisplayMenu = ({ el, clickMenu, textMenu }: propTypeMenu) => {
       onClick={() => clickMenu(el.el)}
       onChange={() => clickMenu(text)}
     >
-      <span style={{ paddingRight: '10px' }}>
+      <span style={{ paddingLeft: '10px', paddingRight: '0px' }}>
         <span
           className={textMenu === el.el ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}
 

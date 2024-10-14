@@ -14,6 +14,15 @@ export const en = {
     "build": "Vite, React, Zustand, hooks, i18next, react-speakup",
   },
 
+  "Learning": {
+    "Learning": "Learning",
+    "title": "Mobile app for learning foreign languages",
+    "desc": `React Native mobile app from scratch for Android and iOS devices. The mobile app is for learning foreign languages. The app has logic to create a playlist based on preliminarily recorded MP3 files from an artist, there is logic based on admin or customer for pauses and repetitions which reorder the whole playlist. The customer has
+    an ability to mark words that he/she remembers, many more features and logics. Offline mode with downloading the whole language MP3 level or just an MP3 Lesson. For storing mobile state I used React Context and Zustand. Despite local login with expired token, also SSO - Google and Facebook is used. For building the app I used create-react-native-app. The app - Papagaio can be found in Android store and Apple store.`,
+    "buildTitle": "Build Technologies:",
+    "build": "React-Native/fs/fbsdk-next/google-signin, Zustand, Context, Formik/yup, Custom hooks",
+  },
+
   "Check": {
     "Check": "Check Car Rental",
     "title": "A rental car registration app to completely fill in missing data",

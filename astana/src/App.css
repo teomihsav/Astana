@@ -117,53 +117,97 @@
 	z-index: 1;
 	box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
 }
+
+.navbarInCover {
+	/* position: relative; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* position: absolute; */
+	clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+	/* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%); */
+}
+.navbarIn {
+	display: flex;
+	align-items: center;
+}
+.contLeft {
+	position: relative;
+	left: 6.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.leftMenuMove {
+	position: relative;
+	top: 1.7rem;
+	height: 41px;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	padding-right: 3px;
+	padding-bottom: 30px;
+}
 .shadowLeft {
-	left: 31.5%;
+	position: relative;
 	border-right: 2px solid #333;
 	width: 3px;
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 	clip-path: inset(0 -15px 0 0);
 }
+.contRight {
+	position: relative;
+	right: 5.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.rightMenuMove {
+	position: relative;
+	top: 0.4rem;
+	left: 0.5rem;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	padding-left: 0px;
+	/* padding-bottom: 20px; */
+}
 .shadowRight {
-	left: 71.7%;
+	position: relative;
 	border-left: 2px solid #333;
 	width: 3px;
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 	clip-path: inset(0 0 0 -15px);
+	left: -32px;
 }
-.navbarInCover {
-	clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 80%);
+.shadowRightAlert {
+	position: relative;
+	border-left: 2px solid #333;
+	width: 3px;
+	height: 60px;
+	box-shadow: 0 0 15px rgba(235, 71, 71, 0.75);
+	clip-path: inset(0 0 0 -15px);
+	left: -32px;
 }
-.navbarIn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: fit-content;
-	height: 50px;
-	overflow: hidden;
-	z-index: 10000;
+.shadowRightAlertGlow {
+	position: relative;
+	border-left: 2px solid #333;
+	width: 3px;
+	height: 60px;
+	box-shadow: 0 0 35px rgba(248, 167, 167, 0.75);
+	clip-path: inset(0 0 0 -15px);
+	left: -32px;
+	transition: all 0.5s ease-in;
 }
-.leftMenuMove {
-	position: sticky;
-	top: 1.7rem;
-	width: 30px;
-	height: 41px;
-	opacity: 0.5;
-	transition: opacity 0.5s ease-in;
-	cursor: pointer;
-	padding-right: 3px;
-}
-.rightMenuMove {
-	position: sticky;
-	top: 1.4rem;
-	width: 30px;
-	height: 41px;
-	opacity: 0.5;
-	transition: opacity 0.5s ease-in;
-	cursor: pointer;
-	padding-left: 10px;
+.shadowLeftAlert {
+	position: relative;
+	border-right: 2px solid #333;
+	width: 3px;
+	height: 60px;
+	box-shadow: 0 0 15px rgba(235, 71, 71, 0.75);
+	clip-path: inset(0 -15px 0 0);
 }
 .leftMenuMove:hover {
 	opacity: 1;
@@ -238,7 +282,7 @@
 
 #animatedMenu {
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
-	animation: glow 2s ease-in;
+	/* animation: glow 2s ease-in; */
 }
 #animatedMenu .marquee {
 	white-space: nowrap;
@@ -402,7 +446,7 @@
 }
 .mic {
 	position: fixed;
-	top: 1.8rem;
+	top: 2.3rem;
 	left: 0.5rem;
 	opacity: 0.5;
 }
@@ -419,7 +463,7 @@
 	width: fit-content; */
 
 	position: fixed;
-	top: 1.3rem;
+	top: 1.9rem;
 	left: 2.4rem;
 	border-radius: 4px;
 	padding: 5px 5px 0px 10px;
@@ -618,7 +662,7 @@
 }
 .langBtn {
 	position: fixed;
-	top: 1.7rem;
+	top: 2.2rem;
 	right: 1.5rem;
 	z-index: 1;
 	width: 30px;

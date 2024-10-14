@@ -17,19 +17,23 @@ type State = {
   scroll: number,
   element: string,
   positionPx: number,
+  alert: { left: boolean, right: boolean },
 }
 type Action = {
   setTranscript: (x: string) => void
   setMove: (x: number) => void
+  setAlert: (x: { left: boolean, right: boolean }) => void
 }
 
 export const useStore = create<State & Action>((set) => ({
   transcript: '',
   scroll: 0,
   element: '',
-  positionPx: 0,
+  positionPx: 100,
+  alert: { left: false, right: false },
   setTranscript: transcript => set(() => ({ transcript })),
   setMove: positionPx => set(() => ({ positionPx })),
+  setAlert: alert => set(() => ({ alert })),
 }))
 
 // ----------------------------------------

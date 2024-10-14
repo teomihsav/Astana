@@ -51,22 +51,25 @@ const Card = (props: CardProps) => {
                   {props.image}
                 </div>
                 :
-                <a href={props.link} >
-                  {
-                    window.innerWidth < 1000 ? <></> :
-                      props.empty || !props.image
-                        ? <></> :
-                        <div>
-                          <div className='dummyApp'>Browse the dummy app</div>
+                props.link === ''
+                  ?
+                  <img className='imgCard' src={props.image as string} width={props.width} />
+                  : <a href={props.link} >
+                    {
+                      window.innerWidth < 1000 ? <></> :
+                        props.empty || !props.image
+                          ? <></> :
+                          <div>
+                            <div className='dummyApp'>Browse the dummy app</div>
 
-                          <img className='imgCard' src={props.image as string} width={props.width} />
-                        </div>
-                  }
-                  {
-                    props.empty ? <></> :
-                      <img src={link} className='svgLink' alt="phone contact" color={'white'} />
-                  } {/* Anchor svg inside the image to show that is a link */}
-                </a>
+                            <img className='imgCard' src={props.image as string} width={props.width} />
+                          </div>
+                    }
+                    {
+                      props.empty || !props.link ? <></> :
+                        <img src={link} className='svgLink' alt="phone contact" color={'white'} />
+                    } {/* Anchor svg inside the image to show that is a link */}
+                  </a>
             }
 
           </div>
