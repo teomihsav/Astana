@@ -14,12 +14,9 @@ const Line = (props: { id: string }) => {
   // }, [props.id])
 
   useEffect(() => {
-    // const element = document.querySelector<HTMLElement>('.textDesc')
-    // document.querySelector<HTMLElement>('.textDesc')!.style.transform = `translateY(${Number(window.scrollY <= 230 ? 100 : window.scrollY)}px)`;
-
     window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
     const el = document.querySelector<HTMLElement>('#' + props.id)
-    // console.log('elem', props.id, el)
+    // console.log('elem', scrollActive)
     elemSet(Number(el))
     function isScrolledIntoView(el: HTMLElement) {
       const rect = el.getBoundingClientRect();

@@ -37,13 +37,13 @@ const Page = () => {
       line: <Line id={'Zero'} />
     },
     {
-      key: '1',
+      key: '2.1',
       id: 'Learning',
       title: t('Learning.title'),
       text: t('Learning.desc'),
       buildTitle: t('Learning.buildTitle'),
       build: t('Learning.build'),
-      link: '',
+      link: false,
       image: Pap,
       width: '',
       class: 'animated-text-stripOneCardTitle',

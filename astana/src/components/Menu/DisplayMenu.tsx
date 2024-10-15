@@ -14,10 +14,16 @@ const DisplayMenu = ({ el, clickMenu, textMenu }: propTypeMenu) => {
 
   // useEffect(() => {
   //   document.removeEventListener('mousemove', function () { })
-  // }, [])
+  // // }, [])
+  // function dragoverHandler(ev: React.DragEvent<HTMLSpanElement>) {
+  //   ev.preventDefault();
+  //   ev.dataTransfer.dropEffect = "move";
+  //   console.log(ev)
+  // }
 
 
-  return <div>
+
+  return <div id='drag'>
     <span
       className='menu '
       onClick={() => clickMenu(el.el)}

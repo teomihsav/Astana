@@ -104,26 +104,28 @@
 }
 
 .navbar {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #242424;
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
 	padding: 10px;
 	z-index: 1;
+	/* box-shadow: 0px 0px 10px 0px rgb(22, 22, 22); */
+}
+.shadowNavbar {
 	box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
 }
-
 .navbarInCover {
 	/* position: relative; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* position: absolute; */
 	clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
 	/* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%); */
 }
