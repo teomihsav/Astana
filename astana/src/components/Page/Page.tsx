@@ -9,6 +9,7 @@ import Signage from '../../assets/signage.png';
 import Damages from '../../assets/damages.png'
 import Logger from '../../assets/logger.png'
 import Pap from '../../assets/pap1.png'
+import Cargo from '../../assets/cargo.png'
 import { useTranslation } from 'react-i18next';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
@@ -43,7 +44,7 @@ const Page = () => {
       text: t('Learning.desc'),
       buildTitle: t('Learning.buildTitle'),
       build: t('Learning.build'),
-      link: false,
+      link: '',
       image: Pap,
       width: '',
       class: 'animated-text-stripOneCardTitle',
@@ -125,6 +126,21 @@ const Page = () => {
       stand: false,
       empty: false,
       line: <Line id={'Five'} />
+    },
+    {
+      key: '6.5',
+      id: 'Cargo',
+      title: t('Cargo.title'),
+      text: t('Cargo.desc'),
+      buildTitle: t('Cargo.buildTitle'),
+      build: t('Cargo.build'),
+      link: 'http://dev.amartan.eu',
+      image: Cargo,
+      width: 650,
+      class: 'animated-text-stripOneCardTitle',
+      stand: false,
+      empty: false,
+      line: <Line id={'Six'} />
     },
     {
       key: '7',

@@ -1,4 +1,7 @@
 export const en = {
+  "textBelowMenu": "Menu can be scrolled horizontally, dragged and moved with arrows",
+  "animationOnOff": "animation On/Off ",
+
   "frontText": {
     "one": "Front-End Developer",
     "two": "The playground - Sofia :). Focused on creating interactive digital experiences on the web.",
@@ -63,9 +66,19 @@ export const en = {
     "build": "React, Redux, React Router, hooks, Custom hooks",
   },
 
+  "Cargo": {
+    "Cargo": "Cargo",
+    "title": "Cargo web app ",
+    "desc": "This web app has smart features. You can choose a route just by clicking on the start and end point on the map or by typing the address. Same way you can use a route and the fuel expense will be calculated. Listing creation of storage, cargo, transport. Way to see online contractors. Dynamic generation of PDF contracts and invoices  ",
+
+    "buildTitle": "Build Technologies:",
+    "build": "React, Redux, React Router, JWT, bcrypt, passport, express, nodeJS, Mongo, hooks, Custom hooks, i18n",
+  },
+
   "Contact": {
     "Contact": "Contact",
   },
+
 
 
 }
