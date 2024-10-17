@@ -12,7 +12,7 @@ import { useStore } from '../../helpers/cardsData'
 
 const Menu = () => {
   const [scrollActive, scrollActiveSet] = useState<number>(0)
-  const [textMenu, textMenuSet] = useState<string>('')
+  // const [textMenu, textMenuSet] = useState<string>('')
   const [, widthInnSet] = useState<string>('')
   const onMouseX = useRef()
 
