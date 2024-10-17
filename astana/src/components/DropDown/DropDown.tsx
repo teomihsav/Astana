@@ -1,10 +1,12 @@
 import { useRef } from "react"
 import { scrollToSmoothly } from "../../helpers/helpers"
 import { propTypeMenu } from "../Menu/DisplayMenu"
+import { useStore } from "../../helpers/cardsData"
 
-const DropDown = ({ el, clickMenu, textMenu }: propTypeMenu) => {
+const DropDown = ({ el, clickMenu, }: propTypeMenu) => {
   const winHeight = useRef(window.innerHeight)
   const ref = useRef(null);
+  const textMenuZ = useStore((state) => state.element)
 
   return <div ref={ref}>
     <span
@@ -16,7 +18,7 @@ const DropDown = ({ el, clickMenu, textMenu }: propTypeMenu) => {
       {/* <span className={(textMenu === el) ? 'underline' : 'underlineHover'}  > */}
       <span>
         <span
-          className={textMenu === el.desc ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}
+          className={textMenuZ === el.desc ? el.desc === 'Logo' ? 'logoUnderline' : 'underline' : el.desc === 'Logo' ? 'logoUnderline' : 'underlineHover'}
           onClick={(event: React.SyntheticEvent) => {
             event.preventDefault()
             const element = document.getElementById(el.desc)
