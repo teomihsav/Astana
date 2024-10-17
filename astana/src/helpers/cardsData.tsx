@@ -1,6 +1,6 @@
 import en from '../assets/en.png'
 import bg from '../assets/bg.png'
-import i18next from 'i18next'
+import i18next, { } from 'i18next'
 import { create } from 'zustand'
 
 export const state = {
@@ -16,6 +16,7 @@ type State = {
   transcript: string,
   scroll: number,
   element: string,
+  textMenuZ: string,
   positionPx: number,
   alert: { left: boolean, right: boolean },
 }
@@ -29,6 +30,7 @@ export const useStore = create<State & Action>((set) => ({
   transcript: '',
   scroll: 0,
   element: '',
+  textMenuZ: '',
   positionPx: 100,
   alert: { left: false, right: false },
   setTranscript: transcript => set(() => ({ transcript })),
@@ -46,4 +48,5 @@ export const langMatch = {
   en: 'English',
   bg: 'Български',
 }
+
 

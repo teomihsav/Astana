@@ -11,6 +11,7 @@ import Logger from '../../assets/logger.png'
 import Pap from '../../assets/pap1.png'
 import Cargo from '../../assets/cargo.png'
 import { useTranslation } from 'react-i18next';
+import MenuLeftBtn from '../common/MenuLeftBtn/MenuLeftBtn';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
@@ -20,7 +21,17 @@ const Page = () => {
 
   const cardsData = [
     {
-      key: '0', id: 'Logo', title: 'Logo', text: '', link: '', image: '', width: 0, class: 'animated-text-stripOneCardTitle', stand: false, empty: true,
+      key: '0',
+      id: 'Logo',
+      title: 'Logo',
+      text: '',
+      link: '',
+      image: '',
+      width: 0,
+      class: 'animated-text-stripOneCardTitle', stand: false,
+      empty: true,
+      line: <Line id={'ZeroZ'} />
+
     },
     {
       key: '1',
@@ -214,6 +225,7 @@ const Page = () => {
 
   return <>
 
+    {(window.innerWidth > 1750) ? <MenuLeftBtn /> : <></>}
     <TextAbove />
 
     <div className='para'>

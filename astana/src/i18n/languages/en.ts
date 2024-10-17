@@ -12,7 +12,7 @@ export const en = {
   "Portfolio": {
     "Portfolio": "Portfolio",
     "title": "Portfolio current web app",
-    "desc": "The current app uses animations and transitions for good customer impression. It`s an one page web app with ability to scroll on exact centered focused card position of the page on menu click. Every web app card has link to real web app with dummy data. The app uses language translation also allows to play text on apps description. The app has ability to recognize voice commands for menu browse. Zustand library is used for app state store.",
+    "desc": "The current app uses animations and transitions for good customer impression. It`s an one page web app with ability to scroll on exact centered focused card position of the page on menu click. Every web app card has link to real web app with dummy data. The app uses language translation also allows to play text on apps description. The app has ability to recognize voice commands for menu browse. Zustand library is used for app state store. The menu and cards are fully object oriented with components settings and translation inserted inside the object.",
     "buildTitle": "Build Technologies:",
     "build": "Vite, React, Zustand, hooks, i18next, react-speakup",
   },

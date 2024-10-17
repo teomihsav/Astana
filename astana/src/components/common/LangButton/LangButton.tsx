@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { languages } from "../../../helpers/cardsData"
 import { useTranslation } from "react-i18next"
-import LangDropDown from "../LangDropDown/LangDropDown"
+import LangDropDown from "./LangDropDown/LangDropDown"
 const LangButton = () => {
   const { i18n } = useTranslation()
   const [swap, swapSet] = useState<boolean>(true)

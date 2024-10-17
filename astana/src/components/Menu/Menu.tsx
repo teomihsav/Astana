@@ -1,24 +1,27 @@
 /* eslint-disable no-inner-declarations */
 import { SetStateAction, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
-import { useTranslation } from 'react-i18next'
 import LangButton from '../common/LangButton/LangButton'
 import VoiceToText from '../common/TextToVoice/VoiceToText'
 import LeftMenuMove from '../common/LeftMenuMove/LeftMenuMove'
 import RightMenuMove from '../common/RightMenuMove/RightMenuMove'
-import LogoBen from '../Logo/LogoBen'
 import BtnSlide from '../common/BtnSlide/BtnSlide'
+import LogoBen from '../Logo/LogoBen'
+import { t } from 'i18next'
+import { useStore } from '../../helpers/cardsData'
 
 const Menu = () => {
-  const { t, } = useTranslation()
   const [scrollActive, scrollActiveSet] = useState<number>(0)
-  // const [moveMouse, moveMouseSet] = useState<number>(0)
-  // const [mouseX, mouseXSet] = useState<number>(() => 0)
   const [textMenu, textMenuSet] = useState<string>('')
   const [, widthInnSet] = useState<string>('')
-  // const winHeight = useRef(window.innerHeight)
   const onMouseX = useRef()
 
+  const clickMenu = (id: string) => {
+    // console.log(id)
+    // textMenuSet(id)
+    useStore.setState({ textMenuZ: id })
+    useStore.setState({ element: id })
+  }
   const menu = [
     { desc: 'Logo', el: 'Logo', id: <LogoBen /> },
     { desc: t("Learning.Learning"), el: 'Learning', },
@@ -30,13 +33,6 @@ const Menu = () => {
     { desc: t('Cargo.Cargo'), el: 'Cargo' },
     { desc: t('Contact.Contact'), el: 'Contact' },
   ]
-
-
-  const clickMenu = (id: string) => {
-    // console.log(id)
-    textMenuSet(id)
-  }
-
   // useEffect(() => {
   //   const testArray = [1, 2, 3, 4, 5, 6, 7]
   //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -65,8 +61,6 @@ const Menu = () => {
       function divMove(e: { clientX: number }) {
         el!.style.cursor = 'grabbing'
         el!.style.userSelect = 'none'
-        // el!.removeAttribute('id');
-        // console.log(' X: ', el!.offsetWidth, onMouseX.current, e.clientX - (onMouseX.current as unknown as number))
         el!.style.transform = `translateX(${(e.clientX - (onMouseX.current as unknown as number) + 100)}px)`
       }
       function mouseDown(e: { clientX: SetStateAction<number> }) {
@@ -79,14 +73,11 @@ const Menu = () => {
       }
 
     }
-
-    // return () => el!.id = 'animatedMenu';
-    // return () => { el!.style.cursor = 'grab' }
   }, [])
 
   useEffect(() => {
     window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-    console.log('Scroll: ', window.scrollY)
+    // console.log('Scroll: ', window.scrollY)
   }, [window.scrollY])
 
   useLayoutEffect(() => {
@@ -106,7 +97,7 @@ const Menu = () => {
             {
               menu.map(el =>
                 <span key={el.desc}>
-                  <DisplayMenu el={el} clickMenu={clickMenu} textMenu={textMenu} />
+                  <DisplayMenu el={el} clickMenu={clickMenu} />
                 </span>
               )
             }

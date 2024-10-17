@@ -6,20 +6,24 @@ import stopImg from '../../../assets/svg/stop.svg'
 import mic from '../../../assets/svg/mic.svg'
 import micOff from '../../../assets/svg/micOff.svg'
 import { scrollToSmoothly } from "../../../helpers/helpers";
+import { useStore } from "../../../helpers/cardsData";
 // import Power from "../svg/Power";
 
 const VoiceToText = () => {
   const { startListening, stopListening, transcript, reset } = useVoiceToText();
   const [tool, toolSet] = useState<string>('')
   const [onOff, onOffSet] = useState<boolean>()
-  // const { setTranscript } = useStore()
   const winHeight = useRef(window.innerHeight)
 
   useEffect(() => {
     reset()
+
     return () => {
       toolSet(transcript.slice(0, -1).trim())
       setTimeout(() => {
+
+        useStore.setState({ element: transcript.slice(0, -1).trim() })
+
         transcript.slice(0, -1).trim() === 'Stop Mic' && stopListening(), onOffSet(false)
         const element = document.getElementById(transcript.slice(0, -1).trim())
 

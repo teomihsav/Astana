@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
-import { languages, state, useStore } from "../../../helpers/cardsData"
+import { languages, state, useStore } from "../../../../helpers/cardsData"
 import { useTranslation } from "react-i18next"
-import { scrollToSmoothly } from "../../../helpers/helpers"
+import { scrollToSmoothly } from "../../../../helpers/helpers"
 import i18next from "i18next"
 const LangDropDown = () => {
   const { i18n } = useTranslation()
