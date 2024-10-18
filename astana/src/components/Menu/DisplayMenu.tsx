@@ -27,7 +27,7 @@ const DisplayMenu = ({ el, clickMenu }: propTypeMenu) => {
 
   // console.log(el)
 
-  return <div id='drag'>
+  return <div>
     <span
       className='menu '
       onClick={() => clickMenu(el.el)}

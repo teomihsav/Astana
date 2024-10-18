@@ -73,7 +73,7 @@
 .menu {
 	font-size: 1.1rem;
 	font-weight: 800;
-	margin-right: 1rem;
+	margin-right: 0.5rem;
 	color: rgb(177, 177, 177);
 }
 
@@ -213,11 +213,11 @@
 	padding-bottom: 30px;
 }
 .shadowLeft {
-	border-right: 3px solid #242424;
+	border-right: 10px solid #242424;
 	width: 3px;
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-	clip-path: inset(0 -200px 0 0);
+	clip-path: inset(0 -20px 0 0);
 	z-index: 10;
 }
 .contRight {
@@ -239,7 +239,7 @@
 }
 .shadowRight {
 	position: relative;
-	border-left: 3px solid #242424;
+	border-left: 10px solid #242424;
 	width: 3px;
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
@@ -787,32 +787,194 @@
 	color: rgb(119, 119, 119);
 	transition: opacity 0.5s ease-in;
 }
-.leftMenuBtn {
+/* Left Menu Projects*/
+.leftMenuProjectsCont {
 	position: fixed;
+	top: 11rem;
+	left: 1.5rem;
+}
+
+.leftMenuProjects {
+	/* position: fixed; */
 	top: 11rem;
 	left: 1.5rem;
 	font-size: 1.5rem;
 	font-weight: 700;
 	width: fit-content;
-	height: 50px;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+}
+.leftMenuProjects:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
+.leftMenuProjects:hover + .projects {
+	/* transition: opacity 0.5s ease-in; */
+	opacity: 1;
+	visibility: visible;
+	height: 300px;
+	/* margin-top: 10px; */
+	margin-bottom: 20px;
+}
+.projects {
+	/* position: fixed; */
+	border-radius: 5px;
+	top: 13.5rem;
+	left: 1.5rem;
+	opacity: 0;
+	width: fit-content;
+	border: 1px solid rgb(50, 50, 50);
+	background-color: #292929;
+	cursor: pointer;
+	text-align-last: left;
+	visibility: hidden;
+	z-index: 10;
+	/* transition: opacity 0.5s ease-in; */
+	transition: height 0.5s, opacity 2s;
+	height: 0px;
+}
+
+.projects:hover {
+	transition: opacity 2s ease-in;
+	opacity: 1;
+	visibility: visible;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.boxCont {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 10px;
+}
+/* Text Zero */
+.textUp {
+	text-align: start;
+	font-size: 1.1rem;
+	font-weight: 800;
+	width: 150px;
+	height: 25px;
+	color: rgb(177, 177, 177);
+	z-index: 1;
+	cursor: pointer;
+}
+.textUp:hover + .box {
+	height: 40px;
+	opacity: 1;
+}
+.box {
+	opacity: 0;
+	width: 150px;
+	height: 0px;
+	color: #5e5e5e;
+	border-radius: 12px;
+	background: rgb(46, 46, 46);
+	transition: height 0.5s, opacity 0.5s;
+}
+.box:hover {
+	height: 40px;
+	color: #949494;
+	opacity: 1;
+}
+/* END */
+
+/* TextOne */
+.textOne {
+	text-align: start;
+	font-size: 1.1rem;
+	font-weight: 800;
+	width: 150px;
+	height: 25px;
+	color: rgb(177, 177, 177);
+	z-index: 1;
+	cursor: pointer;
+}
+.textOne:hover + .boxOne {
+	height: 40px;
+	opacity: 1;
+}
+.boxOne {
+	opacity: 0;
+	width: 150px;
+	height: 0px;
+	color: #5e5e5e;
+	border-radius: 12px;
+	background: rgb(46, 46, 46);
+	transition: height 0.5s, opacity 0.5s;
+}
+.boxOne:hover {
+	height: 40px;
+	color: #949494;
+	opacity: 1;
+}
+/* END */
+
+/* TextTwo */
+.textTwo {
+	text-align: start;
+	font-size: 1.1rem;
+	font-weight: 800;
+	width: 150px;
+	height: 25px;
+	color: rgb(177, 177, 177);
+	z-index: 1;
+	cursor: pointer;
+}
+.textTwo:hover + .boxTwo {
+	height: 40px;
+	opacity: 1;
+}
+.boxTwo {
+	opacity: 0;
+	width: 150px;
+	height: 0px;
+	color: #5e5e5e;
+	border-radius: 12px;
+	background: rgb(46, 46, 46);
+	transition: height 0.5s, opacity 0.5s;
+}
+.boxTwo:hover {
+	height: 40px;
+	color: #949494;
+	opacity: 1;
+}
+/* END */
+
+.leftMenuChevron {
+	position: absolute;
+	/* top: 8px;
+	right: -35px; */
+}
+
+/* Profile */
+.leftMenuBtnProfile {
+	position: fixed;
+	top: 14rem;
+	left: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	width: fit-content;
+	/* height: 300px; */
 	opacity: 0.5;
 	transition: opacity 0.5s ease-in;
 	cursor: pointer;
 	/* z-index: 1; */
 }
-.leftMenuBtn:hover {
+.leftMenuBtnProfile:hover {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
 }
-.leftMenuBtn:hover + .leftMenuBox {
+.leftMenuBtnProfile:hover + .profile {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
 	visibility: visible;
 }
-.leftMenuBox {
+.profile {
 	position: fixed;
 	border-radius: 5px;
-	top: 14rem;
+	top: 13.5rem;
 	left: 1.5rem;
 	opacity: 0;
 	width: fit-content;
@@ -824,34 +986,7 @@
 	text-align-last: left;
 	visibility: hidden;
 }
-.leftMenuBox:hover {
-	transition: opacity 0.5s ease-in;
-	opacity: 1;
-	visibility: visible;
-}
-.leftMenuChevron {
-	position: absolute;
-	/* top: 8px;
-	right: -35px; */
-}
-.leftMenuBtnTest {
-	position: fixed;
-	top: 13rem;
-	left: 1.5rem;
-	font-size: 1.5rem;
-	font-weight: 700;
-	width: fit-content;
-	/* height: 300px; */
-	opacity: 0.5;
-	transition: opacity 0.5s ease-in;
-	cursor: pointer;
-	/* z-index: 1; */
-}
-.leftMenuBtnTest:hover {
-	transition: opacity 0.5s ease-in;
-	opacity: 1;
-}
-.leftMenuBtnTest:hover + .leftMenuBoxTest {
+.profile:hover {
 	transition: opacity 0.5s ease-in;
 	opacity: 1;
 	visibility: visible;

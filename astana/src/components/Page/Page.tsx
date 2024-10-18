@@ -11,7 +11,7 @@ import Logger from '../../assets/logger.png'
 import Pap from '../../assets/pap1.png'
 import Cargo from '../../assets/cargo.png'
 import { useTranslation } from 'react-i18next';
-import MenuLeftBtn from '../common/MenuLeftBtn/MenuLeftBtn';
+import Projects from '../common/MenuLeftBtn/Projects';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
@@ -225,7 +225,8 @@ const Page = () => {
 
   return <>
 
-    {(window.innerWidth > 1750) ? <MenuLeftBtn /> : <></>}
+    {(window.innerWidth > 1750) ? <Projects /> : <></>}
+    {/* {(window.innerWidth > 1750) ? <Profile /> : <></>} */}
     <TextAbove />
 
     <div className='para'>

@@ -5,7 +5,7 @@ import { scrollToSmoothly } from "../../../../helpers/helpers"
 import i18next, { t } from "i18next"
 import DisplayMenu from "../../../Menu/DisplayMenu"
 import LogoBen from "../../../Logo/LogoBen"
-const Profile = () => {
+const ProjectsDropDown = () => {
   // const { i18n } = useTranslation()
   // const [tool, toolSet] = useState<string>('')
   const [, textMenuSet] = useState<string>('')
@@ -44,7 +44,7 @@ const Profile = () => {
   // }
 
   return <>
-    <div className='leftMenuBox' >
+    <div className='projects' >
       {
 
         menu.map(el =>
@@ -69,7 +69,7 @@ const Profile = () => {
   </>
 }
 
-export default Profile
+export default ProjectsDropDown
 // Object.entries(languages).map((el) =>
 //   <img
 //     key={el[0]}

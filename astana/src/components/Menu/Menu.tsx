@@ -71,7 +71,6 @@ const Menu = () => {
       function mouseUp() {
         window.removeEventListener('mousemove', divMove, true);
       }
-
     }
   }, [])
 
@@ -82,6 +81,7 @@ const Menu = () => {
 
   useLayoutEffect(() => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
+    widthInnSet(window.innerWidth.toString())
   }, [window.innerWidth])
 
 
