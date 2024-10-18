@@ -831,8 +831,9 @@
 	visibility: hidden;
 	z-index: 10;
 	/* transition: opacity 0.5s ease-in; */
-	transition: height 0.5s, opacity 2s;
+	transition: height 0.3s, opacity 2s;
 	height: 0px;
+	padding-bottom: 10px;
 }
 
 .projects:hover {
@@ -841,6 +842,7 @@
 	visibility: visible;
 	height: 300px;
 	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .boxCont {
@@ -868,10 +870,13 @@
 	opacity: 0;
 	width: 150px;
 	height: 0px;
+	font-size: 0.9rem;
+	font-weight: 800;
 	color: #5e5e5e;
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
+	padding-top: 7%;
 }
 .box:hover {
 	height: 40px;
@@ -899,10 +904,13 @@
 	opacity: 0;
 	width: 150px;
 	height: 0px;
+	font-size: 0.9rem;
+	font-weight: 800;
 	color: #5e5e5e;
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
+	padding-top: 7%;
 }
 .boxOne:hover {
 	height: 40px;
@@ -930,11 +938,15 @@
 	opacity: 0;
 	width: 150px;
 	height: 0px;
+	font-size: 0.9rem;
+	font-weight: 800;
 	color: #5e5e5e;
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
+	padding-top: 7%;
 }
+
 .boxTwo:hover {
 	height: 40px;
 	color: #949494;
