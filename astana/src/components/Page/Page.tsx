@@ -15,6 +15,7 @@ import Projects from '../common/MenuLeftBtn/Projects';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
+  const [, widthInnSet] = useState<string>('')
   // function translate(key: never | string) {
   //   return i18next.t(key);
   // }
@@ -203,7 +204,10 @@ const Page = () => {
       empty: true,
     },
   ]
-
+  useLayoutEffect(() => {
+    window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
+    widthInnSet(window.innerWidth.toString())
+  }, [window.innerWidth])
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [, scrollActiveSet] = useState<number>(0)
   useLayoutEffect(() => {
