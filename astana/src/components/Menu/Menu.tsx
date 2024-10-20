@@ -1,5 +1,5 @@
 /* eslint-disable no-inner-declarations */
-import { SetStateAction, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { SetStateAction, useEffect, useRef, useState } from 'react'
 import DisplayMenu from './DisplayMenu'
 import LangButton from '../common/LangButton/LangButton'
 import VoiceToText from '../common/TextToVoice/VoiceToText'
@@ -9,11 +9,12 @@ import BtnSlide from '../common/BtnSlide/BtnSlide'
 import LogoBen from '../Logo/LogoBen'
 import { t } from 'i18next'
 import { useStore } from '../../helpers/cardsData'
+import MenuMobileButton from '../common/MenuMobileButton/MenuMobileButton'
 
 const Menu = () => {
-  const [scrollActive, scrollActiveSet] = useState<number>(0)
+  const [, scrollActiveSet] = useState<number>(0)
   // const [textMenu, textMenuSet] = useState<string>('')
-  const [, widthInnSet] = useState<string>('')
+  const [widthInn, widthInnSet] = useState<number>(window.outerWidth)
   const onMouseX = useRef()
 
   const clickMenu = (id: string) => {
@@ -76,18 +77,39 @@ const Menu = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-    // console.log('Scroll: ', window.scrollY)
   }, [window.scrollY])
 
-  useLayoutEffect(() => {
-    window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
-    widthInnSet(window.innerWidth.toString())
-  }, [window.innerWidth])
+  useEffect(() => {
+    window.addEventListener("resize", () => widthInnSet(widthInn));
+    widthInnSet(widthInn)
+  }, [widthInn < 1100])
 
+  console.log('widthInn', widthInn)
 
   return <>
+    {/* {
+      backDrop && (
+        <div
+          role='button'
+          className='backDrop'
+          onClick={() => backDropSet(!backDrop)}
+        >
+          <div>
+            {
+              menu.map(el =>
+                <span key={el.desc}>
+                  <DisplayMenu el={el} clickMenu={clickMenu} mobile={true} />
+                </span>
+              )
+            }
+          </div>
+        </div>
+      )
+    } */}
+
     {
-      <div className={scrollActive > 50 ? 'navbar shadowNavbar ' : 'navbar '}>
+      // <div className={widthInn < 1100 ? 'navbarSmall' : scrollActive > 30 ? 'shadowNavbar ' : 'navbar '}>
+      <div className={window.innerWidth < 1100 ? 'navbarSmall' : 'navbar '}>
         {window.innerWidth < 1100 ? <></> : <LeftMenuMove />}
 
         <span className={window.innerWidth > 1100 ? ' navbarInCover' : ''} >
@@ -97,21 +119,23 @@ const Menu = () => {
             {
               menu.map(el =>
                 <span key={el.desc}>
-                  <DisplayMenu el={el} clickMenu={clickMenu} />
+                  <DisplayMenu el={el} clickMenu={clickMenu} mobile={false} />
                 </span>
               )
             }
 
           </span>
+          <MenuMobileButton />
         </span>
+
 
         {window.innerWidth < 1100 ? <></> : <RightMenuMove />}
 
       </div>
     }
+    {(window.innerWidth > 1100) ? <BtnSlide /> : <></>}
+    {(window.innerWidth > 900) && <VoiceToText />}
     <LangButton />
-    {(window.innerWidth > 1050) ? <BtnSlide /> : <></>}
-    {(window.innerWidth > 1050 || window.innerWidth < 900) && <VoiceToText />}
   </>
 }
 

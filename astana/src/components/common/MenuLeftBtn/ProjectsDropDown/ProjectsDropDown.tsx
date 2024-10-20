@@ -49,7 +49,7 @@ const ProjectsDropDown = () => {
 
         menu.map(el =>
           <span key={el.desc}>
-            <DisplayMenu el={el} clickMenu={clickMenu} />
+            <DisplayMenu el={el} clickMenu={clickMenu} mobile={false} />
           </span>
         )
         // Object.entries(menuLeft.map((el) =>

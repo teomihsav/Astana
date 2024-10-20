@@ -208,23 +208,27 @@ const Page = () => {
     window.addEventListener("resize", () => widthInnSet(window.innerWidth.toString()));
     widthInnSet(window.innerWidth.toString())
   }, [window.innerWidth])
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [, scrollActiveSet] = useState<number>(0)
+
   useLayoutEffect(() => {
-    window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-    document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(- 500)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(500)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(-500)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(500)}px)`;
+    window.innerWidth > 1100 && (window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY))),
+      document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(- 500)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(500)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(-500)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(500)}px)`
+    )
   }, [])
 
   useEffect(() => {
-    window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY)));
-    document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(-window.scrollY)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
-    document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(-window.scrollY)}px)`;
-    // document.querySelector<HTMLElement>('#animated-text-strip-reversedTwo')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+    window.innerWidth > 1100 && (window.addEventListener("scroll", () => scrollActiveSet(Number(window.scrollY))),
+      document.querySelector<HTMLElement>('#animated-text-strip')!.style.transform = `translateX(${Number(window.scrollY)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-strip-reversed')!.style.transform = `translateX(${Number(-window.scrollY)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-stripOne')!.style.transform = `translateX(${Number(window.scrollY)}px)`,
+      document.querySelector<HTMLElement>('#animated-text-strip-reversedOne')!.style.transform = `translateX(${Number(-window.scrollY)}px)`
+      // document.querySelector<HTMLElement>('#animated-text-strip-reversedTwo')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
+    )
   }, [window.scrollY])
 
   return <>
