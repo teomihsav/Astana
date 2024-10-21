@@ -16,6 +16,7 @@ const Menu = () => {
   // const [textMenu, textMenuSet] = useState<string>('')
   const [widthInn, widthInnSet] = useState<number>(window.outerWidth)
   const onMouseX = useRef()
+  const { backDrop } = useStore()
 
   const clickMenu = (id: string) => {
     // console.log(id)
@@ -34,7 +35,9 @@ const Menu = () => {
     { desc: t('Cargo.Cargo'), el: 'Cargo' },
     { desc: t('Contact.Contact'), el: 'Contact' },
   ]
-  // useEffect(() => {
+  // console.log('Lang', useStore.getState().lang)
+
+  // // useEffect(() => {
   //   const testArray = [1, 2, 3, 4, 5, 6, 7]
   //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   //   testArray.forEach((value, index): unknown =>
@@ -50,7 +53,6 @@ const Menu = () => {
       event.preventDefault();
       document.querySelector<HTMLElement>('.navbarIn')!.style.transform = `translateX(${event.deltaY * 3}px)`
     })
-
   }, [])
 
   useEffect(() => {
@@ -83,8 +85,6 @@ const Menu = () => {
     window.addEventListener("resize", () => widthInnSet(widthInn));
     widthInnSet(widthInn)
   }, [widthInn < 1100,])
-  const { backDrop } = useStore()
-  // console.log('widthInn', widthInn, backDrop)
 
   return <>
     {
@@ -108,7 +108,6 @@ const Menu = () => {
     }
 
     {
-      // <div className={widthInn < 1100 ? 'navbarSmall' : scrollActive > 30 ? 'shadowNavbar ' : 'navbar '}>
       <div className={window.innerWidth < 1100 ? 'navbarSmall' : 'navbar '}>
         {window.innerWidth < 1100 ? <></> : <LeftMenuMove />}
 

@@ -46,7 +46,7 @@ const DisplayMenu = ({ el, clickMenu, mobile }: propTypeMenu) => {
           {
             window.innerWidth < 1100
               ?
-              mobile && el.el === 'Logo' ? el.id : mobile && <span className={'fadeIn'}>{el.desc}</span>
+              mobile && el.el === 'Logo' ? el.id : mobile && <span className={'fadeIn'}>{(el.desc)}</span>
               :
               el.el === 'Logo' ? el.id
                 :

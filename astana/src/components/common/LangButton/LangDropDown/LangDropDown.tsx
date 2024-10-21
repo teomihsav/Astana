@@ -13,7 +13,7 @@ const LangDropDown = () => {
   }
 
   const winHeight = useRef(window.innerHeight)
-
+  const { setLang } = useStore()
   // Fix scroll on diff text on lang change
   useEffect(() => {
     const elementStore = useStore.getState().element
@@ -23,8 +23,11 @@ const LangDropDown = () => {
 
   const changeLango = (lang: string) => {
     i18n.changeLanguage(lang)
+    // useStore.setState({ lang: lang })
+    setLang(lang)
     state.test = !state.test
   }
+  // console.log(i18n.language)
   const toolTip = (lang: string) => {
     toolSet(langMatch[lang as keyof typeof langMatch])
   }

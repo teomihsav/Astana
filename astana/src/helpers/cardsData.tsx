@@ -21,12 +21,14 @@ type State = {
   positionPx: number,
   alert: { left: boolean, right: boolean },
   backDrop: boolean
+  lang: string
 }
 type Action = {
   setTranscript: (x: string) => void
   setMove: (x: number) => void
   setAlert: (x: { left: boolean, right: boolean }) => void
   setbackDrop: (x: boolean) => void
+  setLang: (x: string) => void
 }
 
 export const useStore = create<State & Action>((set) => ({
@@ -36,11 +38,13 @@ export const useStore = create<State & Action>((set) => ({
   textMenuZ: '',
   positionPx: 100,
   backDrop: false,
+  lang: 'en',
   alert: { left: false, right: false },
   setTranscript: transcript => set(() => ({ transcript })),
   setMove: positionPx => set(() => ({ positionPx })),
   setAlert: alert => set(() => ({ alert })),
   setbackDrop: backDrop => set(() => ({ backDrop })),
+  setLang: lang => set(() => ({ lang })),
 }))
 
 // ----------------------------------------
