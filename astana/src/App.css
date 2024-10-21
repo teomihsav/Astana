@@ -990,6 +990,7 @@
 .textUp:hover + .box {
 	height: 120px;
 	opacity: 1;
+	visibility: visible;
 }
 .box {
 	opacity: 0;
@@ -1002,11 +1003,13 @@
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
 	padding-top: 7%;
+	visibility: hidden;
 }
 .box:hover {
 	height: 120px;
 	color: #949494;
 	opacity: 1;
+	visibility: visible;
 }
 .inputProfile {
 	resize: none;
@@ -1043,12 +1046,13 @@
 	width: 150px;
 	height: 25px;
 	color: rgb(177, 177, 177);
-	z-index: 1;
+	/* z-index: 1; */
 	cursor: pointer;
 }
 .textOne:hover + .boxOne {
 	height: 120px;
 	opacity: 1;
+	visibility: visible;
 }
 .boxOne {
 	opacity: 0;
@@ -1061,11 +1065,13 @@
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
 	padding-top: 7%;
+	visibility: hidden;
 }
 .boxOne:hover {
 	height: 120px;
 	color: #949494;
 	opacity: 1;
+	visibility: visible;
 }
 /* END */
 
