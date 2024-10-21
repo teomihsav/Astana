@@ -1,5 +1,5 @@
 export const en = {
-  "textBelowMenu": "Menu can be scrolled horizontally, dragged and moved with arrows",
+  "textBelowMenu": "Menu can be mouse scrolled horizontally, dragged and moved with arrows",
   "animationOnOff": "animation On/Off ",
   "comment": "Comment",
   "forMe": "For me",

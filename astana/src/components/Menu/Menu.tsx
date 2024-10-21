@@ -82,17 +82,17 @@ const Menu = () => {
   useEffect(() => {
     window.addEventListener("resize", () => widthInnSet(widthInn));
     widthInnSet(widthInn)
-  }, [widthInn < 1100])
-
-  console.log('widthInn', widthInn)
+  }, [widthInn < 1100,])
+  const { backDrop } = useStore()
+  // console.log('widthInn', widthInn, backDrop)
 
   return <>
-    {/* {
+    {
       backDrop && (
         <div
           role='button'
           className='backDrop'
-          onClick={() => backDropSet(!backDrop)}
+        // onClick={() => backDropSet(!backDrop)}
         >
           <div>
             {
@@ -105,7 +105,7 @@ const Menu = () => {
           </div>
         </div>
       )
-    } */}
+    }
 
     {
       // <div className={widthInn < 1100 ? 'navbarSmall' : scrollActive > 30 ? 'shadowNavbar ' : 'navbar '}>

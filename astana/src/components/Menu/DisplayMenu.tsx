@@ -44,14 +44,17 @@ const DisplayMenu = ({ el, clickMenu, mobile }: propTypeMenu) => {
           }}
         >
           {
-            // window.innerWidth < 1100 ? <></> :
-            el.el === 'Logo' ? mobile && el.id : window.innerWidth < 1100
+            window.innerWidth < 1100
               ?
-              mobile && <span className={'fadeIn'}>{el.desc}</span>
+              mobile && el.el === 'Logo' ? el.id : mobile && <span className={'fadeIn'}>{el.desc}</span>
               :
-              // <div style={{ borderRadius: '50%', width: '10px', height: '10px', backgroundColor: '#5dd39e', display: 'inline-block', }}></div>
-              // :
-              <span className={'fadeIn'}>{el.desc}</span>
+              el.el === 'Logo' ? el.id
+                :
+                // mobile && <span className={'fadeIn'}>{el.desc}</span>
+                // :
+                // <div style={{ borderRadius: '50%', width: '10px', height: '10px', backgroundColor: '#5dd39e', display: 'inline-block', }}></div>
+                // :
+                <span className={'fadeIn'}>{el.desc}</span>
           }
         </span>
       </span>

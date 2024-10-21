@@ -1,18 +1,26 @@
 // import Projects from "../MenuLeftBtn/Projects"
 
 import { useState } from "react"
+import { useStore } from "../../../helpers/cardsData"
 
 const MenuMobileButton = () => {
   const [backDrop, backDropSet] = useState<boolean>(false)
 
-  console.log(backDrop)
+  // const { setBackDrop } = useStore()
+
+  const change = () => {
+    backDropSet(!backDrop)
+    useStore.setState({ backDrop: !useStore.getState().backDrop })
+    // setBackDrop({ backDrop: !useStore.getState().backDrop })
+  }
+  // console.log(backDrop)
 
   return <>
     <div
       className='menuMobile '
-      onClick={() => backDropSet(!backDrop)}
+      onClick={change}
     >
-      {backDrop ? <div className='x'></div> : <>
+      {backDrop ? <div className='x '></div> : <>
         <div className='menuMobileLines'></div>
         <div className='menuMobileLines'></div>
         <div className='menuMobileLines'></div>

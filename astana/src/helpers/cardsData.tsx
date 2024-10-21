@@ -7,6 +7,7 @@ export const state = {
   lang: i18next.language,
   test: false,
   transcript: '',
+  mobile: false,
 
 }
 
@@ -19,11 +20,13 @@ type State = {
   textMenuZ: string,
   positionPx: number,
   alert: { left: boolean, right: boolean },
+  backDrop: boolean
 }
 type Action = {
   setTranscript: (x: string) => void
   setMove: (x: number) => void
   setAlert: (x: { left: boolean, right: boolean }) => void
+  setbackDrop: (x: boolean) => void
 }
 
 export const useStore = create<State & Action>((set) => ({
@@ -32,10 +35,12 @@ export const useStore = create<State & Action>((set) => ({
   element: '',
   textMenuZ: '',
   positionPx: 100,
+  backDrop: false,
   alert: { left: false, right: false },
   setTranscript: transcript => set(() => ({ transcript })),
   setMove: positionPx => set(() => ({ positionPx })),
   setAlert: alert => set(() => ({ alert })),
+  setbackDrop: backDrop => set(() => ({ backDrop })),
 }))
 
 // ----------------------------------------
