@@ -53,10 +53,11 @@ const Card = (props: CardProps) => {
                 :
                 props.link === ''
                   ?
-                  <img className='imgCard' src={props.image as string} width={props.width} />
-                  : <a href={props.link} >
+                  window.innerWidth < 1100 ? <></> : <img className='imgCard' src={props.image as string} width={props.width} />
+                  :
+                  <a href={props.link} >
                     {
-                      window.innerWidth < 1000 ? <></> :
+                      window.innerWidth < 1100 ? <></> :
                         props.empty || !props.image
                           ? <></> :
                           <div>
