@@ -5,6 +5,7 @@ export const en = {
   "forMe": "For me",
   "contact": "Contact",
   "opinion": "Write a opinion about the page",
+  "name": "Mihail Theoharidis",
 
   "frontText": {
     "one": "Front-End Developer",

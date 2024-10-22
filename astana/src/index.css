@@ -12,12 +12,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-/* * {
-	scroll-behavior: smooth;
-} */
-/* html {
-	scroll-behavior: smooth;
-} */
+
 a {
 	font-weight: 500;
 	color: #646cff;
@@ -34,6 +29,7 @@ body {
 	min-width: 320px;
 	min-height: 10vh;
 	line-height: 1.5;
+	background-color: #242424;
 	font-size: clamp(12px, 2vw, 20px);
 }
 

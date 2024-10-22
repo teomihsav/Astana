@@ -11,7 +11,7 @@ const TextAbove = () => {
       </span>
 
       <div className="textCont">
-        <span className="animatedText">Mihail Theoharidis</span>
+        <span className="animatedText">{t('name')}</span>
       </div>
 
       <div className='contPic'>
