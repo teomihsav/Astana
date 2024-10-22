@@ -51,6 +51,24 @@
 		cursor: pointer;
 	}
 }
+@media (max-width: 1100px) {
+	#animated-text-strip {
+		display: flex;
+		flex-flow: row nowrap;
+		overflow: hidden;
+		justify-content: flex-start;
+		margin-top: 10%;
+		font-size: 1rem;
+		/* font-size: 4vw; */
+		color: #5dd39e;
+		font-weight: 1000;
+		background: #292929;
+		padding: 3px;
+		transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+		animation: glow 2s ease-in;
+		/* width: fit-content; */
+	}
+}
 /* @media (max-width: 1100) {
 	.navbarSmall {
 		box-shadow: 0px 0px 10px 0px rgb(22, 22, 22);
@@ -460,8 +478,8 @@
 	overflow: hidden;
 	justify-content: flex-start;
 	margin-top: 10%;
-	/* font-size: 4rem; */
-	font-size: 4vw;
+	font-size: 4rem;
+	/* font-size: 4vw; */
 	color: #5dd39e;
 	font-weight: 1000;
 	background: #292929;
@@ -488,7 +506,6 @@
 	cursor: pointer;
 }
 .picDrop {
-	/* transform: translateY(-50px); */
 	border: #5dd39e 3px solid;
 	border-radius: 6px;
 	transform-origin: bottom center; /* Set the pivot point to the bottom center */
@@ -510,6 +527,33 @@
 	transform: translateY(-150px);
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
 }
+
+.textCont {
+	position: absolute;
+	top: 70%;
+	right: -33%;
+	width: 100%;
+	overflow: hidden; /* Ensures the text is hidden until it slides in */
+	clip-path: polygon(0 20%, 60% 50%, 67% 90%, 0% 100%);
+}
+.animatedText {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 1rem;
+	font-weight: 800;
+	color: #464646;
+	transform: translateX(100%); /* Starts off-screen to the right */
+	animation: slideIn 10s ease forwards; /* 3 seconds animation */
+}
+@keyframes slideIn {
+	0% {
+		transform: translateX(200%); /* Fully off-screen to the right */
+	}
+	100% {
+		transform: translateX(0); /* Fully visible in its original position */
+	}
+}
+
 #animated-text-strip-reversed {
 	display: flex;
 	flex-flow: row nowrap;

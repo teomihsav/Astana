@@ -10,6 +10,10 @@ const TextAbove = () => {
         {t('frontText.one')}
       </span>
 
+      <div className="textCont">
+        <span className="animatedText">Mihail Theoharidis</span>
+      </div>
+
       <div className='contPic'>
         {window.innerWidth > 1300 ? <PicDrop /> : <></>}
       </div>
