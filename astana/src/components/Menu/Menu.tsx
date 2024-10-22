@@ -14,7 +14,7 @@ import MenuMobileButton from '../common/MenuMobileButton/MenuMobileButton'
 const Menu = () => {
   const [, scrollActiveSet] = useState<number>(0)
   // const [textMenu, textMenuSet] = useState<string>('')
-  const [widthInn, widthInnSet] = useState<number>(window.outerWidth)
+  const [, widthInnSet] = useState<number>(window.outerWidth)
   const onMouseX = useRef()
   const { backDrop } = useStore()
 
@@ -82,9 +82,9 @@ const Menu = () => {
   }, [window.scrollY])
 
   useEffect(() => {
-    window.addEventListener("resize", () => widthInnSet(widthInn));
-    widthInnSet(widthInn)
-  }, [widthInn < 1100,])
+    window.addEventListener("resize", () => widthInnSet(window.innerWidth));
+    // widthInnSet(window.innerWidth)
+  }, [window.innerWidth])
 
   return <>
     {

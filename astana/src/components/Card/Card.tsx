@@ -20,7 +20,7 @@ const Card = (props: CardProps) => {
   // console.log(build)
   return <>
 
-    <div id={props.id} className='animated'>
+    <div id={props.id} className={window.innerWidth > 1100 ? 'animated' : ''}>
       {
         props.title === 'Logo' ? <div></div> : <div className={props.empty ? '' : 'card'} id={props.class}>
 

@@ -29,7 +29,8 @@ const Page = () => {
       link: '',
       image: '',
       width: 0,
-      class: 'animated-text-stripOneCardTitle', stand: false,
+      class: 'animated-text-stripOneCardTitle',
+      stand: false,
       empty: true,
       line: <Line id={'ZeroZ'} />
 
@@ -276,9 +277,7 @@ const Page = () => {
     <div className='para'>
       Front-End Developer
     </div>
-    {/* <div className='paraOne'>
-      TEXT One
-    </div> */}
+
 
     {cardsData.map(el => <Card  {...el} />)}
 

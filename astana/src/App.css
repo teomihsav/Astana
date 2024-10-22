@@ -451,12 +451,16 @@
 	}
 }
 
+.contTextPic {
+	position: relative;
+}
 #animated-text-strip {
 	display: flex;
 	flex-flow: row nowrap;
 	overflow: hidden;
 	justify-content: flex-start;
 	margin-top: 10%;
+	/* font-size: 4rem; */
 	font-size: 4vw;
 	color: #5dd39e;
 	font-weight: 1000;
@@ -465,6 +469,46 @@
 	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
 	animation: glow 2s ease-in;
 	/* width: fit-content; */
+}
+.contPic {
+	position: absolute;
+	/* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+	clip-path: polygon(
+		50% 0,
+		100% 0,
+		100% 43%,
+		94% 78%,
+		68% 100%,
+		32% 100%,
+		6% 78%,
+		0% 43%,
+		0 0
+	);
+	right: 5%;
+	cursor: pointer;
+}
+.picDrop {
+	/* transform: translateY(-50px); */
+	border: #5dd39e 3px solid;
+	border-radius: 6px;
+	transform-origin: bottom center; /* Set the pivot point to the bottom center */
+	transform: rotate(10deg); /* Rotate the bottom of the image */
+	transition: transform 0.5s ease-in-out; /* Smooth animation */
+	transition: transform 0.5s ease;
+	cursor: crosshair;
+}
+.contPic.zoomed .picDrop {
+	transform-origin: var(--x) var(--y); /* Set transform origin dynamically */
+	transform: scale(2); /* Zoom level */
+}
+.picDrop:hover {
+	/* transform: translateY(0px); */
+	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+	transform: rotate(20deg); /* Further rotation on hover */
+}
+.picDrop:not(:hover) {
+	transform: translateY(-150px);
+	transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
 }
 #animated-text-strip-reversed {
 	display: flex;
@@ -805,7 +849,7 @@
 	color: white;
 	font-weight: 700;
 	/* margin: 25px; */
-	margin: 20% 0 100% 0;
+	margin: 28% 0 100% 0;
 }
 .email {
 	position: relative;
@@ -814,7 +858,7 @@
 	cursor: pointer;
 	align-items: flex-end;
 	font-size: 1rem;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 .email:hover {
 	position: relative;
@@ -823,7 +867,7 @@
 	cursor: pointer;
 	align-items: flex-end;
 	font-size: 1rem;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 .emailText {
 	color: white;
@@ -846,7 +890,7 @@
 .textPopUpCont {
 	position: absolute;
 	top: 0rem;
-	left: -1.5rem;
+	left: -1.7rem;
 	width: 100px;
 }
 .textPopUp {
@@ -855,7 +899,7 @@
 	font-weight: 700;
 	color: lightgray;
 	top: -15px;
-	left: 40px;
+	left: 33%;
 	display: block;
 	justify-content: center;
 }
@@ -988,7 +1032,7 @@
 	cursor: pointer;
 }
 .textUp:hover + .box {
-	height: 120px;
+	height: 160px;
 	opacity: 1;
 	visibility: visible;
 }
@@ -1002,11 +1046,11 @@
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
-	padding-top: 7%;
+	padding-top: 2%;
 	visibility: hidden;
 }
 .box:hover {
-	height: 120px;
+	height: 160px;
 	color: #949494;
 	opacity: 1;
 	visibility: visible;
@@ -1019,8 +1063,9 @@
 	border: none;
 	background-color: rgb(83, 83, 83);
 	border-radius: 8px;
-	padding: 5px;
-	color: #242424;
+	margin: 5px;
+	color: #cecece;
+	padding: 3%;
 }
 .submit {
 	resize: none;
@@ -1030,6 +1075,7 @@
 	border: none;
 	background-color: rgb(83, 83, 83);
 	border-radius: 8px;
+	margin: 10px;
 	padding: 5px;
 	color: #242424;
 }
@@ -1046,11 +1092,10 @@
 	width: 150px;
 	height: 25px;
 	color: rgb(177, 177, 177);
-	/* z-index: 1; */
 	cursor: pointer;
 }
 .textOne:hover + .boxOne {
-	height: 120px;
+	height: 160px;
 	opacity: 1;
 	visibility: visible;
 }
@@ -1064,11 +1109,11 @@
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
-	padding-top: 7%;
+	padding: 2% 5% 0% 5%;
 	visibility: hidden;
 }
 .boxOne:hover {
-	height: 120px;
+	height: 160px;
 	color: #949494;
 	opacity: 1;
 	visibility: visible;
@@ -1087,26 +1132,30 @@
 	cursor: pointer;
 }
 .textTwo:hover + .boxTwo {
-	height: 120px;
+	height: 160px;
 	opacity: 1;
+	visibility: visible;
 }
 .boxTwo {
+	display: ruby;
 	opacity: 0;
 	width: 200px;
-	height: 0px;
+	height: 120px;
 	font-size: 0.9rem;
 	font-weight: 800;
 	color: #5e5e5e;
 	border-radius: 12px;
 	background: rgb(46, 46, 46);
 	transition: height 0.5s, opacity 0.5s;
-	padding-top: 7%;
+	padding-top: 2%;
+	visibility: hidden;
 }
 
 .boxTwo:hover {
-	height: 120px;
+	height: 160px;
 	color: #949494;
 	opacity: 1;
+	visibility: visible;
 }
 /* END */
 
@@ -1239,13 +1288,6 @@
 	font-weight: 1000;
 	font-size: 4vw;
 }
-/* .paraOne {
-	top: 12%;
-	left: 42%;
-	opacity: 1;
-	animation: animate 7s linear infinite;
-	color: #333;
-} */
 
 @keyframes animate {
 	0% {

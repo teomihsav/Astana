@@ -1,4 +1,5 @@
 import { t } from "i18next"
+import Contact from "../../../Contact/Contact"
 
 const MenuTransformation = () => {
   return <div className="boxCont">
@@ -12,14 +13,14 @@ const MenuTransformation = () => {
     </div>
 
     <div className="textOne">{t('forMe')}</div>
-    <div className="boxOne">Lorem sub one text Lorem \
-      Lorem sub one text Lorem \
-      Lorem sub one text Lorem \
-      Lorem sub one text Lorem \
-      Lorem sub one text Lorem \
+    <div className="boxOne">
+      I'm in IT sphere since I'm a child. At the beginning I started with Pascal, Perl and PHP then Flash - all that time was mixed with Network Engineering own businesses and last years I end up mainly Front-End with ReactJS and many more.
     </div>
     <div className="textTwo">{t('contact')}</div>
-    <div className="boxTwo">contact@ben.bg</div>
+    <div className="boxTwo">
+      <Contact />
+      {/* contact@ben.bg */}
+    </div>
   </div>
 }
 
