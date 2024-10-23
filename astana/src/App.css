@@ -1331,7 +1331,7 @@
 	animation: animate 1.5s ease-in-out;
 	opacity: 0;
 	font-weight: 1000;
-	font-size: 4vw;
+	font-size: 2vw;
 }
 
 @keyframes animate {

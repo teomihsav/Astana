@@ -29,7 +29,6 @@ const PicDrop = () => {
 
   useEffect(() => {
     nameBool ? document.querySelector<HTMLElement>('.animatedText')!.style.color = '#b2b2b2' : document.querySelector<HTMLElement>('.animatedText')!.style.color = '#464646'
-
   })
 
   return (
