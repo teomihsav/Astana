@@ -81,21 +81,6 @@ const Page = () => {
       line: <Line id={'One'} />
     },
     {
-      key: '3',
-      id: 'Task drag',
-      title: t('TaskDrag.title'),
-      text: t('TaskDrag.desc'),
-      buildTitle: t('TaskDrag.buildTitle'),
-      build: t('TaskDrag.build'),
-      link: 'https://www.dnd.ben.bg',
-      image: Dnd,
-      width: 450,
-      class: 'animated-text-stripOneCardTitle',
-      stand: false,
-      empty: false,
-      line: <Line id={'Two'} />
-    },
-    {
       key: '4',
       id: 'Fast Track',
       title: t('FastTrack.title'),
@@ -124,6 +109,21 @@ const Page = () => {
       stand: true,
       empty: false,
       line: <Line id={'Four'} />
+    },
+    {
+      key: '3',
+      id: 'Task drag',
+      title: t('TaskDrag.title'),
+      text: t('TaskDrag.desc'),
+      buildTitle: t('TaskDrag.buildTitle'),
+      build: t('TaskDrag.build'),
+      link: 'https://www.dnd.ben.bg',
+      image: Dnd,
+      width: 450,
+      class: 'animated-text-stripOneCardTitle',
+      stand: false,
+      empty: false,
+      line: <Line id={'Two'} />
     },
     {
       key: '6',
