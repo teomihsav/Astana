@@ -81,6 +81,14 @@ export const bg = {
     "build": "React, Redux, React Router, JWT, bcrypt, passport, express, nodeJS, Mongo,  hooks, Custom hooks, i18n",
   },
 
+  "Commerce": {
+    "Commerce": "Tърговия",
+    "title": "Търговско уеб приложение за продажба на компютърни и мрежови продукти",
+    "desc": "Уебстраницата е базирана на платформата WordPress и плъгина WooCommerce. Уебсайтът осигурява лесно пазаруване с подробни списъци с продукти, отзиви на клиенти и промоции. Продуктите от две компании се качват програмно от XML файлове всяка вечер с помощта на cron и JS",
+    "buildTitle": "Технологии за създаване:",
+    "build": "WordPress, WooCommerce, JS",
+  },
+
   "Contact": {
     "Contact": "Контакт",
   },

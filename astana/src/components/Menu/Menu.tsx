@@ -33,6 +33,7 @@ const Menu = () => {
     { desc: t('TaskDrag.TaskDrag'), el: 'Task drag', },
     { desc: t('LogTime.LogTime'), el: 'Log time' },
     { desc: t('Cargo.Cargo'), el: 'Cargo' },
+    { desc: t('Commerce.Commerce'), el: 'Commerce' },
     { desc: t('Contact.Contact'), el: 'Contact' },
   ]
   // console.log('Lang', useStore.getState().lang)

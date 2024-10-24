@@ -80,6 +80,14 @@ export const en = {
     "build": "React, Redux, React Router, JWT, bcrypt, passport, express, nodeJS, Mongo, hooks, Custom hooks, i18n",
   },
 
+  "Commerce": {
+    "Commerce": "Commerce",
+    "title": "Commerce web app for selling computer and network products",
+    "desc": "Web page is based on WordPress platform and WooCommerce plugin. The website provides an easy shopping experience with detailed product listings, customer reviews, and promotions. Products from two companies are programmatically uploaded from XML files every night with help of cron and JS",
+    "buildTitle": "Build Technologies:",
+    "build": "WordPress, WooCommerce, JS",
+  },
+
   "Contact": {
     "Contact": "Contact",
   },

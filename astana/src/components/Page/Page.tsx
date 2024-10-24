@@ -10,8 +10,10 @@ import Damages from '../../assets/damages.png'
 import Logger from '../../assets/logger.png'
 import Pap from '../../assets/pap1.png'
 import Cargo from '../../assets/cargo.png'
+import Ben from '../../assets/ben.png'
 import { useTranslation } from 'react-i18next';
 import Projects from '../common/MenuLeftBtn/Projects';
+import { fetch } from '../../helpers/fetch';
 // import VoiceToText from '../common/TextToVoice/VoiceToText';
 const Page = () => {
   const { t } = useTranslation()
@@ -156,6 +158,21 @@ const Page = () => {
       line: <Line id={'Six'} />
     },
     {
+      key: '6.6',
+      id: 'Commerce',
+      title: t('Commerce.title'),
+      text: t('Commerce.desc'),
+      buildTitle: t('Commerce.buildTitle'),
+      build: t('Commerce.build'),
+      link: 'https://ben.bg',
+      image: Ben,
+      width: 650,
+      class: 'animated-text-stripOneCardTitle',
+      stand: false,
+      empty: false,
+      line: <Line id={'Six'} />
+    },
+    {
       key: '7',
       id: 'Contact',
       title: '',
@@ -267,6 +284,13 @@ const Page = () => {
       // document.querySelector<HTMLElement>('#animated-text-strip-reversedTwo')!.style.transform = `translateX(${Number(window.scrollY)}px)`;
     )
   }, [window.scrollY])
+
+  useEffect(() => {
+    // fetch('GET', '', 'https://beporfolio.onrender.com', 'users', '', 'desc').then((data) => console.log(' Users', data))
+    fetch('GET', '', `https://finnhub.io/api/v1/quote?symbol=${'AAPL'}&token=${'cscvmr1r01qpohrsask0cscvmr1r01qpohrsaskg'}`, '', '', 'desc').then((data) => console.log(' Users', data.data.c))
+    // console.log('Key:', import.meta.env.VITE_FINNHUB_KEY)
+    // https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`
+  }, [])
 
   return <>
 

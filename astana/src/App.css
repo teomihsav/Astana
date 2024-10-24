@@ -349,7 +349,7 @@
 
 .contLeft {
 	position: relative;
-	left: 6.3rem;
+	left: 5.5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -357,26 +357,27 @@
 .leftMenuMove {
 	position: relative;
 	top: 1.7rem;
+	right: -0.3rem;
 	height: 41px;
 	opacity: 0.5;
 	transition: opacity 0.5s ease-in;
 	cursor: pointer;
-	padding-right: 20px;
+	/* padding-right: 20px; */
 	padding-bottom: 30px;
 }
 .shadowLeft {
 	position: relative;
-	border-right: 10px solid #242424;
-	width: 3px;
+	border-right: 21px solid #242424;
+	width: 0px;
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 	clip-path: inset(0 -20px 0 0);
 	z-index: 10;
-	left: -10px;
+	left: -1%;
 }
 .contRight {
 	position: relative;
-	right: 5.5rem;
+	right: 5.5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -397,7 +398,7 @@
 	height: 60px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 	clip-path: inset(0 0 0 -15px);
-	left: -47px;
+	left: -62%;
 }
 .shadowRightAlert {
 	position: relative;
