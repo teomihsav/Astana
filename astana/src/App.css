@@ -338,6 +338,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-right: 1%;
 	clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
 	/* box-shadow: 30px 0px 113px 32px rgb(0, 0, 0, 12); */
 }
