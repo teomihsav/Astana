@@ -7,24 +7,6 @@ const Google = () => {
 
   const [isLogged, isLoggedSet] = useState<SSO>();
 
-  // const googleLogin = useGoogleLogin({
-  //   onSuccess: (codeResponse) => {
-  //     axios.get(
-  //       `https://www.googleapis.com/oauth2/v1/userinfo? 
-  //                  access_token=${codeResponse.access_token}`,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer 
-  //                      ${codeResponse.access_token}`,
-  //           Accept: "application/json",
-  //         },
-  //       }).then((res) => {`
-  //         //  googleID, gmail, name, etc...
-  //         console.log(res.data);
-  //       }).catch((err) => console.log(err));
-  //   },
-  //   onError: (error) => console.log("Login Failed:", error),
-  // });
   function handleLoginSuccess(credentialResponse: CredentialResponse) {
     console.log('credentialResponse.credential', credentialResponse)
     const idToken = credentialResponse.credential;
@@ -41,13 +23,7 @@ const Google = () => {
   }
 
   return <>
-    {/* <GoogleLogin
-      shape="square"
-      type="icon"
-      size="medium"
-      onSuccess={credentialResponse => console.log(credentialResponse)}
-      onError={() => console.log('Login Failed')}
-      /> */}
+
     <div className={isLogged?.user?.email_verified ? 'googleContLogged ' : 'googleCont'}>
 
       <div className='googleSign'>
@@ -57,6 +33,7 @@ const Google = () => {
             <div
               className='googleTextLogged'
             >
+              <img src={isLogged?.user?.picture} width={24} style={{ paddingLeft: '5px' }} alt="user image" />
               {isLogged?.user?.name}
             </div>
             :
