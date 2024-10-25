@@ -1,11 +1,12 @@
 import { CredentialResponse, GoogleLogin, googleLogout } from '@react-oauth/google';
 import axios from 'axios';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SSO } from '../../../types/types';
 
 const Google = () => {
 
   const [isLogged, isLoggedSet] = useState<SSO>();
+  const [el, elSet] = useState<HTMLElement | null>();
 
   function handleLoginSuccess(credentialResponse: CredentialResponse) {
     console.log('credentialResponse.credential', credentialResponse)
@@ -21,6 +22,14 @@ const Google = () => {
     console.log("User logged out", isLogged);
     // Clear any user data from your app’s state if needed
   }
+  // const el = document.querySelector<HTMLElement>('.nsm7Bb-HzV7m-LgbsSe')
+  // nsm7Bb-HzV7m-LgbsSe
+  useEffect(() => {
+    const el = document.querySelector<HTMLElement>('.nsm7Bb-HzV7m-LgbsSe')
+    elSet(el)
+    console.log('el', el)
+    el === null ? '' : document.querySelector<HTMLElement>('.nsm7Bb-HzV7m-LgbsSe')!.style.backgroundColor = '#242424'
+  }, [el])
 
   return <>
 
@@ -45,9 +54,10 @@ const Google = () => {
         }
         {
           !isLogged?.user?.email_verified && <GoogleLogin
-            shape="square"
+            shape="circle"
             type="icon"
             size="medium"
+
             onSuccess={handleLoginSuccess}
             onError={() => console.log('Login Failed')}
           />
