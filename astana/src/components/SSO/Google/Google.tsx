@@ -34,7 +34,7 @@ const Google = () => {
               className='googleTextLogged'
             >
               <img src={isLogged?.user?.picture} width={24} style={{ paddingLeft: '5px' }} alt="user image" />
-              {isLogged?.user?.name}
+              <span style={{ paddingLeft: '5px' }} >{isLogged?.user?.name}</span>
             </div>
             :
             <div
