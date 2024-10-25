@@ -17,32 +17,35 @@ const Contact = () => {
     textSet('Copied')
   }
 
-  return <div className={window.innerWidth > 1000 ? 'email-text' : 'email-text'}>
-    <span className='textPopUp'>
-      {/* {window.innerWidth > 1000 ? text : ''} */}
-      <div className='textPopUpCont'>
-        {text}
-      </div>
-    </span>
+  return <div className='contactCont'>
 
-    <span
-      role='button'
-      className='email'
-      onClick={copyToCLipboard}
-      onMouseOver={() => textSet('Click to Copy')}
-      onMouseLeave={() => textSet('')}
-    >
-      {
-        // window.innerWidth > 1000 && 
-        <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
-      }
-      {
-        // window.innerWidth < 1000 ?
-        // <img src={email} width={'100%'} style={{}} className='' alt="phone contact" color={'white'} />
-        // : 
-        <div className='emailText'>contact@ben.bg</div>
-      }
-    </span>
+    <div className={'emailCont'}>
+      <span className='textPopUp'>
+        {/* {window.innerWidth > 1000 ? text : ''} */}
+        <div className='textPopUpCont'>
+          {text}
+        </div>
+      </span>
+
+      <span
+        role='button'
+        className='email'
+        onClick={copyToCLipboard}
+        onMouseOver={() => textSet('Click to Copy')}
+        onMouseLeave={() => textSet('')}
+      >
+        {
+          // window.innerWidth > 1000 && 
+          <img src={email} width={'10%'} className='svgEmail' alt="phone contact" color={'white'} />
+        }
+        {
+          // window.innerWidth < 1000 ?
+          // <img src={email} width={'100%'} style={{}} className='' alt="phone contact" color={'white'} />
+          // : 
+          <div className='emailText'>contact@ben.bg</div>
+        }
+      </span>
+    </div>
   </div>
 
 }

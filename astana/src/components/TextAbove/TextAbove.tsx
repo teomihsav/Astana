@@ -11,7 +11,7 @@ const TextAbove = () => {
       </span>
 
       <div className="textCont">
-        <span className="animatedText">{t('name')}</span>
+        {window.innerWidth > 1300 ? <span className="animatedText">{t('name')}</span> : <></>}
       </div>
 
       <div className='contPic'>

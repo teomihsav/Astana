@@ -110,7 +110,8 @@ const Menu = () => {
     }
 
     {
-      <div className={window.innerWidth < 1100 ? 'navbarSmall' : 'navbar '}>
+      // <div className={window.innerWidth < 1100 ? 'navbarSmall' : 'navbar '}>
+      <div className={'navbar '}>
         {window.innerWidth < 1100 ? <></> : <LeftMenuMove />}
 
         <span className={window.innerWidth > 1100 ? ' navbarInCover' : ''} >
@@ -135,7 +136,7 @@ const Menu = () => {
       </div>
     }
     {(window.innerWidth > 1100) ? <BtnSlide /> : <></>}
-    {(window.innerWidth > 900) && <VoiceToText />}
+    {(window.innerWidth > 1100) && <VoiceToText />}
     <Google />
     <LangButton />
   </>

@@ -1,10 +1,11 @@
-import { GoogleLogin, googleLogout } from '@react-oauth/google';
+import { CredentialResponse, GoogleLogin, googleLogout } from '@react-oauth/google';
 import axios from 'axios';
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { SSO } from '../../../types/types';
 
 const Google = () => {
 
-  const [isLogged, isLoggedSet] = useState<any>();
+  const [isLogged, isLoggedSet] = useState<SSO>();
 
   // const googleLogin = useGoogleLogin({
   //   onSuccess: (codeResponse) => {
@@ -17,14 +18,15 @@ const Google = () => {
   //                      ${codeResponse.access_token}`,
   //           Accept: "application/json",
   //         },
-  //       }).then((res) => {
+  //       }).then((res) => {`
   //         //  googleID, gmail, name, etc...
   //         console.log(res.data);
   //       }).catch((err) => console.log(err));
   //   },
   //   onError: (error) => console.log("Login Failed:", error),
   // });
-  function handleLoginSuccess(credentialResponse) {
+  function handleLoginSuccess(credentialResponse: CredentialResponse) {
+    console.log('credentialResponse.credential', credentialResponse)
     const idToken = credentialResponse.credential;
     axios.post('http://localhost:5000/auth/google', { token: idToken })
       .then(response => (console.log('Backend response:', response.data), isLoggedSet(response.data)))
@@ -33,7 +35,7 @@ const Google = () => {
 
   function logout() {
     googleLogout();
-    isLoggedSet(null)
+    isLoggedSet(undefined);
     console.log("User logged out", isLogged);
     // Clear any user data from your app’s state if needed
   }
@@ -46,7 +48,7 @@ const Google = () => {
       onSuccess={credentialResponse => console.log(credentialResponse)}
       onError={() => console.log('Login Failed')}
       /> */}
-    <div className={isLogged?.user?.email_verified ? 'googleContLogged googleContLoggedCover' : 'googleCont'}>
+    <div className={isLogged?.user?.email_verified ? 'googleContLogged ' : 'googleCont'}>
 
       <div className='googleSign'>
         {
