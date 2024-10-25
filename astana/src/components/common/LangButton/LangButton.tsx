@@ -14,6 +14,7 @@ const LangButton = () => {
     >
       <img className='' src={languages[i18n.language as keyof typeof languages]} alt={`${i18n.language}`} width={22} />
     </div>
+
     <LangDropDown />
 
   </>

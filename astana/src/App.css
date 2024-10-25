@@ -1347,3 +1347,107 @@
 		opacity: 0;
 	}
 }
+
+/* Google */
+.googleCont {
+	position: fixed;
+	top: 1.5rem;
+	right: 5rem;
+	z-index: 1;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	border: 1px solid rgb(139, 139, 139);
+	width: fit-content;
+	padding: 5px;
+	border-radius: 6px;
+}
+
+.googleContLogged {
+	position: fixed;
+	top: 1.8rem;
+	right: 5rem;
+	z-index: 1;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	/* border: 1px solid rgb(78, 78, 78); */
+
+	width: fit-content;
+	padding: 5px;
+	border-radius: 6px;
+	height: fit-content;
+}
+.googleContLogged:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+}
+.googleContLoggedCover {
+	position: fixed;
+	top: 1.8rem;
+	right: 5rem;
+	z-index: 1;
+	opacity: 0.5;
+	height: 50px;
+	transition: opacity 0.5s ease-in;
+	cursor: pointer;
+	width: fit-content;
+	padding: 5px;
+	border-radius: 6px;
+	height: fit-content;
+}
+.googleContLoggedCover:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+	height: 50px;
+}
+.googleContLoggedCover:hover + .logoutBox {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+	visibility: visible;
+}
+
+.logoutBox {
+	position: fixed;
+	border-radius: 5px;
+	top: 3.5rem;
+	right: 7.5rem;
+	z-index: 10;
+	opacity: 0;
+	width: fit-content;
+	height: fit-content;
+	border: 1px solid rgb(78, 78, 78);
+	background-color: rgb(41, 41, 41);
+	transition: opacity 0.5s ease-in;
+	padding: 5px;
+	cursor: pointer;
+	visibility: hidden;
+
+	color: #9e9e9e;
+	font-size: 0.8rem;
+	font-weight: 700;
+	width: fit-content;
+}
+.logoutBox:hover {
+	transition: opacity 0.5s ease-in;
+	opacity: 1;
+	visibility: visible;
+}
+
+.googleSign {
+	display: flex;
+	align-items: center;
+}
+.googleText {
+	color: #9e9e9e;
+	font-size: 0.8rem;
+	font-weight: 700;
+	width: fit-content;
+	padding-right: 1rem;
+}
+.googleTextLogged {
+	color: #9e9e9e;
+	font-size: 0.8rem;
+	font-weight: 700;
+	width: fit-content;
+}

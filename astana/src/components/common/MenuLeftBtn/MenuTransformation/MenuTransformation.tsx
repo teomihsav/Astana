@@ -2,6 +2,7 @@ import { t } from "i18next"
 import Contact from "../../../Contact/Contact"
 
 const MenuTransformation = () => {
+
   return <div className="boxCont">
     {/* <div className="textUp">Profile</div> */}
     <div className="textUp">{t('comment')}</div>

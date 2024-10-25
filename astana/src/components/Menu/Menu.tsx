@@ -10,6 +10,7 @@ import LogoBen from '../Logo/LogoBen'
 import { t } from 'i18next'
 import { useStore } from '../../helpers/cardsData'
 import MenuMobileButton from '../common/MenuMobileButton/MenuMobileButton'
+import Google from '../SSO/Google/Google'
 
 const Menu = () => {
   const [, scrollActiveSet] = useState<number>(0)
@@ -135,6 +136,7 @@ const Menu = () => {
     }
     {(window.innerWidth > 1100) ? <BtnSlide /> : <></>}
     {(window.innerWidth > 900) && <VoiceToText />}
+    <Google />
     <LangButton />
   </>
 }
